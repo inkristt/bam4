@@ -1,6 +1,5 @@
-import Link from 'next/link'
-import React, {useState, useEffect} from 'react'
-import { useStateContext } from '../context/StateContext'
+import React, { useState } from 'react';
+import { useStateContext } from '../context/StateContext';
 import { client } from '../lib/client'
 import Router from "next/router";
 import { v4 as uuidv4 } from 'uuid';
@@ -10,7 +9,7 @@ import Image from"next/image"
 
 
 
-const placanje = () => {
+const Placanje = () => {
     const [ime, setime] = useState("")
     const [prezime, setprezime] = useState("")
     const [ulica, setulica] = useState("")
@@ -20,14 +19,7 @@ const placanje = () => {
     const [posta, setposta] = useState("")
     const [mail, setmail] = useState("")
     const {cartItems, totalPrice, totalQuantities, qty}=useStateContext()
-    const lazy=React.useRef(null)
     const [fields, setfields] = useState(false)
-    const sanity=()=>{
-        cartItems.map((cartProduct)=>{
-
-        })
-    }
-    
         
     const doktor={
         right:"20%",
@@ -64,7 +56,7 @@ const placanje = () => {
         }
     }
   return (
-    <div className='main'>
+    <form className='main'>
         {fields ?<p className="proba">Popunite sva polja</p>:<p></p>}
         <input type="text" placeholder='Ime' value={ime} onChange={(e) => setime(e.target.value)}></input>
         <input type="text" placeholder='Prezime' value={prezime} onChange={(e) => setprezime(e.target.value)}></input>
@@ -80,8 +72,8 @@ const placanje = () => {
         </div>
         
        
-    </div>
+    </form>
   )
 }
 
-export default placanje
+export default Placanje
