@@ -140,6 +140,7 @@ width: 100%;
 }
 .hero-banner-container .beats-solo{
  font-size: 20px;
+ z-index: 2 ;
 }
 .hero-banner-container button{
  border-radius: 15px;
@@ -147,7 +148,7 @@ width: 100%;
  background-color: #f02d34;
  color: white;
  border: none;
- margin-top: 40px;
+ margin-top: 20px;
  font-size: 18px;
  font-weight: 500;
  cursor: pointer;
@@ -155,10 +156,12 @@ width: 100%;
 }
 
 .hero-banner-container h3{
+ z-index: 2 ;
  font-size: 4rem;
  margin-top: 4px;
 }
 .hero-banner-container h1{
+ z-index: 2 ;
  color: white;
  font-size: 10em;
  margin-left: -20px;
@@ -166,8 +169,8 @@ width: 100%;
 }
 .hero-banner-image{
  position: absolute;
- top: 0%;
- right:20%;
+ top: 5%;
+ right:10%;
  width: 450px;
  height: 450px;
 }
@@ -655,14 +658,28 @@ margin-top: 160px;
 }
 @media screen and (max-width:800px) {
  .hero-banner-container{
+ padding: 20px 20px;
  height: 400px;
  }
  .hero-banner-image{
+ z-index: 1 ;
  width: 40%;
  height: 42%;
- top: 50%;
+ top: 40%;
  right: 6%;
  }
+ .hero-banner-container button{
+    border-radius: 15px;
+    padding: 10px 16px;
+    background-color: #f02d34;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index:10000 !important;
+
+   }
  .tipka{
    top: 10%;
  }
@@ -717,6 +734,8 @@ margin-top: 160px;
  bottom: 60px;
  }
  .product-detail-container{
+ padding: 10px;
+ justify-content: space-around;
  flex-wrap: wrap;
  }
  .product-detail-container .product-detail-image{
@@ -724,8 +743,9 @@ margin-top: 160px;
  height: 350px;
  }
  .cart-container{
- width: 415px;
- padding: 4px;
+ height: 100vh;
+ width: 300px;
+ padding: 10px;
  }
  .cart-heading{
  margin-top: 35px;
@@ -791,13 +811,19 @@ margin-top: 160px;
 }
 .success{
  height: 350px;
+ display: flex;
+ justify-content: space-around;
+ padding: 10px ;
 }
 .success h2{
  font-size: 17px;
 }
 .btn-container{
- width: 300px;
+ width: 200px;
  margin: auto;
+}
+.joj{
+    width: 200px;
 }
 
 }

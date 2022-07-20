@@ -46,6 +46,19 @@ export default {
             title: "Quantity",
             type: "number"
         }
+        ,
+        {
+            name:"kategorije",
+            title:"Kategorije",
+            type:'string',
+    
+        }
+        ,
+        {
+            name:"zaliha",
+            title:"Zaliha",
+            type:"number",
+        }
 
 
     ]
