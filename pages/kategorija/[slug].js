@@ -2,16 +2,21 @@ import React from 'react'
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 
+
 const KatDetails = ({proizvodi, kategorija}) => {
   
   return (
     <div>
-      {console.log(kategorija)}
-      {console.log(proizvodi)}
+      <div className='centar'>
+      <div className='rel'>
+        <p>{kategorija.ime}</p>
+        <div className='crnina'></div>
+        <img className='slidza' src={urlFor(kategorija.slika)}/>
+      </div> 
+      </div>
       <div className="products-container">
-      {proizvodi?.map((product) =>product.kategorije==kategorija.ime ?  <Product key= {product._id} product={product} />:<p key={product._id}></p>)}
-      
-    </div>
+        {proizvodi?.map((product) =>product.kategorije==kategorija.ime ?  <Product key= {product._id} product={product} />:<p key={product._id}></p>)}     
+      </div>
       
     </div>
   )

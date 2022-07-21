@@ -1,14 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiOutlineShopping } from 'react-icons/ai'
+import { AiOutlineShopping,AiOutlineMenu } from 'react-icons/ai'
+
 import Korpa from './Korpa';
 import { useStateContext } from '../context/StateContext';
+import Menu from './Menu';
 
 const Navigation = () => {
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const { showCart, setShowCart, totalQuantities ,showMenu,setshowMenu} = useStateContext();
 
   return (
     <div className="navbar-container">
+      <button type="button" onClick={() => setshowMenu(!showMenu)} className="cart-icon" >
+        <AiOutlineMenu />
+      </button>
       <p className="logo">
         <Link href="/">Srebro Shop</Link>
       </p>
@@ -17,6 +22,9 @@ const Navigation = () => {
         <AiOutlineShopping />
         <span className="cart-item-qty">{totalQuantities}</span>
       </button>
+      
+      {showMenu && <Menu/>}
+
 
       {showCart &&<Korpa/>}
     </div>

@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "srebro"
-  },
   "api": {
     "projectId": "mt89jdwr",
     "dataset": "production"
+  },
+  "project": {
+    "name": "srebro"
   },
   "plugins": [
     "@sanity/base",
