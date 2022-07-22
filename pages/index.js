@@ -28,7 +28,7 @@ const Home = ({bannerData,kategorije,proizvodi}) => {
         <h2>Naši proizvodi</h2>
         <p>Nakit po vasem ukusu</p>
       </div>
-      <div className="products-container">
+      <div className="products-container grid">
       {proizvodi?.map((kategorija) =>  <Product key= {kategorija._id} product={kategorija} />)}
       
     </div>
