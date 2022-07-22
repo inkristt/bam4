@@ -16,8 +16,8 @@ const Layout = ({ children }) => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         <title>Srebro Shop</title>
-      </Head>
-      <header>
+      </Head>  
+      <header className='fixed'>
         <Navigation />
       </header>
       <main className="main-container">

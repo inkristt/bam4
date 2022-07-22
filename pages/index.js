@@ -20,7 +20,7 @@ const Home = ({bannerData,kategorije,proizvodi}) => {
         <h2>Izaberite kategoriju:</h2>
         
       </div>
-      <div className="products-container">
+      <div className="products-container grid2">
       {kategorije?.map((kategorija) =>  <Kat key= {kategorija._id} kategorija={kategorija} />)}
       
     </div>
@@ -30,7 +30,6 @@ const Home = ({bannerData,kategorije,proizvodi}) => {
       </div>
       <div className="products-container grid">
       {proizvodi?.map((kategorija) =>  <Product key= {kategorija._id} product={kategorija} />)}
-      
     </div>
     </div>
   )

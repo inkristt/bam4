@@ -18,7 +18,7 @@ const Placanje = () => {
     const [grad, setgrad] = useState("")
     const [posta, setposta] = useState("")
     const [mail, setmail] = useState("")
-    const {cartItems, totalPrice, totalQuantities, qty}=useStateContext()
+    const {cartItems, totalPrice, totalQuantities, qty,promo}=useStateContext()
     const [fields, setfields] = useState(false)
         
     const doktor={
@@ -40,6 +40,7 @@ const Placanje = () => {
                 posta,
                 ukupnacena:totalPrice,
                 proizvod:cartItems,  
+                pkod:promo,
             }
             client.create(doc).then(() => {
                 Router.push("/success");
@@ -61,10 +62,10 @@ const Placanje = () => {
         <input type="text" placeholder='Ime' value={ime} onChange={(e) => setime(e.target.value)}></input>
         <input type="text" placeholder='Prezime' value={prezime} onChange={(e) => setprezime(e.target.value)}></input>
         <input type="text" placeholder='Mejl' value={mail} onChange={(e) => setmail(e.target.value)}></input>
-        <input type="text" placeholder='Broj' value={broj} onChange={(e) => setbroj(e.target.value)}></input>
+        <input type="text" placeholder='Broj telefona' value={broj} onChange={(e) => setbroj(e.target.value)}></input>
         <input type="text" placeholder='Drzava' value={drzava} onChange={(e) => setdrzava(e.target.value)}></input>
         <input type="text" placeholder='Grad' value={grad} onChange={(e) => setgrad(e.target.value)}></input>
-        <input type="text" placeholder='Ulica' value={ulica} onChange={(e) => setulica(e.target.value)}></input>
+        <input type="text" placeholder='Ulica io broj' value={ulica} onChange={(e) => setulica(e.target.value)}></input>
         <input type="text" placeholder='Postanski broj' value={posta} onChange={(e) => setposta(e.target.value)}></input>
         <button type="button" onClick={zavrsi}>Potvrdi</button>
         <div  style={doktor} className="titan">
