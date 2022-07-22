@@ -22,7 +22,7 @@ const Product = ({ product }) => {
             className="product-image"
           />
           {
-            product.zaliha >0? <h5>{product.zaliha> 4? <p> Na stanju {product.zaliha} komada </p> : <p> Ostalo jos samo {product.zaliha} komada</p>} </h5> : <h5>Product nedosupan</h5>
+            product.zaliha >0? <h5>{product.zaliha> 4? <p> Na stanju {product.zaliha} komada </p> : <p> Ostalo jos samo {product.zaliha} komada</p>} </h5> : <h5>Proizvod nedosupan</h5>
           }
           
           <p className="product-name kat-name">{product.naziv}</p>
