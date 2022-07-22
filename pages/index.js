@@ -1,14 +1,23 @@
-import React from 'react'
-import { Product,Banner,Kategorije } from '../components'
+import React,{useEffect} from 'react'
+import { Product,Banner } from '../components'
 import Kat from '../components/Kat'
+import { useStateContext } from '../context/StateContext'
 import { client } from '../lib/client'
 
 const Home = ({bannerData,kategorije,proizvodi}) => {
+  const {setkat,kat} = useStateContext();
+  
+
+  useEffect(() => {
+    
+    setkat(kategorije)
+  }, [])
+  
   return (
     <div>
       <Banner heroBanner={bannerData.length && bannerData[0]}  />
       <div className="products-heading">
-        <h2>Meni:</h2>
+        <h2>Izaberite kategoriju:</h2>
         
       </div>
       <div className="products-container">
@@ -34,7 +43,6 @@ export const getServerSideProps = async () => {
   const bannerData = await client.fetch(bannerQuery);
   const productsQuery = '*[_type == "product"]'
   const proizvodi = await client.fetch(productsQuery);
-  console.log(kategorije)
 
   return {
     props: { bannerData,kategorije,proizvodi}

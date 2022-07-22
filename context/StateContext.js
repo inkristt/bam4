@@ -4,12 +4,14 @@ import { toast } from 'react-hot-toast';
 const Context = createContext();
 
 export const StateContext = ({ children }) => {
+  const [showMenu, setshowMenu] = useState(false)
   const [products,setproducts] = useState([])
   const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
+  const [kat, setkat] = useState([])
 
   let foundProduct;
   let index;
@@ -39,7 +41,7 @@ export const StateContext = ({ children }) => {
       
       setCartItems([...cartItems, { ...product }]);
     }
-    toast.success(`${qty} ${product.naziv} Dodato u korpu.`);
+    toast.success(`${quantity} ${product.naziv} Dodato u korpu.`);
   } 
 
   const onRemove = (product) => {
@@ -92,6 +94,10 @@ export const StateContext = ({ children }) => {
         totalPrice,
         totalQuantities,
         qty,
+        showMenu,
+        kat,setkat,
+        setQty,
+        setshowMenu,
         incQty,
         decQty,
         onAdd,

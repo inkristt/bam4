@@ -6,7 +6,7 @@ import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
 const ProductDetails = ({ product, products }) => {
-  const { image, naziv, opis, cena } = product;
+  const { image, naziv, opis, cena,kategorije,zaliha } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart} = useStateContext();
   const handleBuyNow = () => {
@@ -50,21 +50,28 @@ const ProductDetails = ({ product, products }) => {
               (20)
             </p>
           </div>
+          <h3>{kategorije}</h3>
           <h4>Opis: </h4>
           <p>{opis}</p>
           <p className="price">{cena} Rsd</p>
-          <div className="quantity">
+          {
+            zaliha> 0? <div className="quantity">
             <h3>Kolicina:</h3>
             <p className="quantity-desc">
               <span className="minus" onClick={decQty} ><AiOutlineMinus /></span>
               <span className="num">{qty}</span>
               <span className="plus" onClick={incQty} ><AiOutlinePlus /></span>
             </p>
-          </div>
-          <div className="buttons">
+          </div> : <p></p>
+          }
+          
+          {
+            zaliha >0 ? <div className="buttons">
             <button type="button" className="add-to-cart" onClick={()=> onAdd(product, qty)} >Dodaj u korpu</button>
             <button type="button" className="buy-now" onClick={handleBuyNow}>Kupi</button>
-          </div>
+          </div> : <h3> Proizvod nedostupan</h3> 
+          }
+          
         </div>
       </div>
 
