@@ -14,6 +14,9 @@ const ProductDetails = ({ product, products }) => {
 
     setShowCart(true);
   }
+  const pom = ()=>{
+
+  }
   
 
   
@@ -38,6 +41,9 @@ const ProductDetails = ({ product, products }) => {
 
         <div className="product-detail-desc">
           <h1>{naziv}</h1>
+          {
+            zaliha >0? <h5>{zaliha> 4? <p> Na stanju {zaliha} komada </p> : <p> Ostalo jos samo {zaliha} komada</p>} </h5> : <h5>Proizvod nedosupan</h5>
+          }
           <div className="reviews">
             <div>
               <AiFillStar />
@@ -58,9 +64,9 @@ const ProductDetails = ({ product, products }) => {
             zaliha> 0? <div className="quantity">
             <h3>Kolicina:</h3>
             <p className="quantity-desc">
-              <span className="minus" onClick={decQty} ><AiOutlineMinus /></span>
+              <span className={qty !=1 ? 'minus': 'nimi'} onClick={decQty} ><AiOutlineMinus /></span>
               <span className="num">{qty}</span>
-              <span className="plus" onClick={incQty} ><AiOutlinePlus /></span>
+              <span className={zaliha > qty? "plus" : "ni"} onClick={zaliha>qty?  incQty :pom} ><AiOutlinePlus /></span>
             </p>
           </div> : <p></p>
           }
