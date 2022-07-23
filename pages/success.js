@@ -40,8 +40,8 @@ const Success = () => {
         <p className="email-msg">Proverite mejl u toku dana.</p>
         <p className="description">
           Ako imate pitanja, pitajte nas
-          <a className="email" href="mailto:inkris1989@gmail.com">
-            inkris1989@gmail.com
+          <a className="email" href="mailto:tinagluscevic92@gmail.com">
+              tinagluscevic92@gmail.com
           </a>
         </p>
         <Link href="/">
