@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;1,400;1,700&display=swap');
 html,
 body,
 * {
@@ -200,7 +200,7 @@ span.text-red {
     font-size: 90px;
     top: 150px;
     z-index: 100;
-    font-family: 'Poppins';
+    font-family: 'Ibarra Real Nova';
 }
 
 .crnina {
