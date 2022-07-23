@@ -90,7 +90,7 @@ const Korpa = () => {
             <h6>Promo kod moze da uamni cenu artikla za 5%, 10% I 20%</h6>
             <div className="btn-container">
               <Link href={`/placanje`}>
-                <button type="button" className="btn" onClick={() => setShowCart(false)}>
+                <button type="button" className="btn voz" onClick={() => setShowCart(false)}>
                   Nastavi placanje
                 </button>
               </Link>
