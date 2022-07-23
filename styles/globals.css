@@ -10,6 +10,16 @@ body,
     box-sizing: border-box;
 
 }
+.fixed{
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    background-color: #fff;
+    padding: 2px 20px 0 0;
+    z-index: 9999999999999999999;
+    
+}
+
 
 ::-webkit-scrollbar {
     width: 0px;
@@ -24,7 +34,7 @@ a {
     max-width: 1400px;
     margin: auto;
     width: 100%;
-
+    padding: 35px 0;
 }
 
 .layout {
@@ -121,12 +131,21 @@ span.text-red {
     margin-top: 20px;
     width: 100%;
 }
-
+.hmm{
+    text-align: center;
+    height: 40px;
+}
 .grid {
     display: grid;
-    grid-template: 420px/ auto auto auto;
+    grid-template: auto/ auto auto auto auto;
     grid-gap: 20px;
-    padding: 10px
+   
+}
+.grid2 {
+    display: grid;
+    grid-template: auto/ auto auto auto;
+    grid-gap: 20px;
+   
 }
 
 .product-card {
@@ -134,7 +153,6 @@ span.text-red {
     transform: scale(1, 1);
     transition: transform 0.5s ease;
     color: #324d67;
-
 }
 
 .product-card:hover {
@@ -155,7 +173,7 @@ span.text-red {
 .centar {
     display: flex;
     justify-content: center;
-    margin-bottom: 300px;
+    margin-bottom: 400px;
 
 }
 
@@ -173,7 +191,7 @@ span.text-red {
     align-items: center;
     height: 70px;
     left: 20px;
-    background-color: rgb(4, 4, 4);
+    
     position: absolute;
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -921,11 +939,17 @@ h5 {
     height: 100px;
     display: none;
 }
-
+.mt10{
+    margin-top: 20px
+}
 .kat-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     text-align: center;
-
+    width: 200px;
+    height: 50px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -936,6 +960,14 @@ h5 {
     }
 
     .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .grid2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

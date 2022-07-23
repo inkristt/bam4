@@ -56,6 +56,10 @@ export default {
             type: "array",
             of: [{ type: 'product' }],
         },
-        
+        {
+            name:"pkod",
+            title:"Pkod",
+            type:"string"
+        }
     ]
 }

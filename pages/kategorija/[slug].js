@@ -4,19 +4,24 @@ import { Product } from '../../components';
 
 
 const KatDetails = ({proizvodi, kategorija}) => {
-  
+  const pom=()=>{
+
+  }
   return (
-    <div>
+    <div >
       <div className='centar'>
       <div className='rel'>
         <p>{kategorija.ime}</p>
         <div className='crnina'></div>
         <img className='slidza' src={urlFor(kategorija.slika)}/>
       </div> 
+  </div>
+      <div>
+        <div className="products-container grid2">
+          {proizvodi?.map((product) =>product.kategorije==kategorija.ime ?  <Product key= {product._id} product={product} />:null)}     
+        </div>
       </div>
-      <div className="products-container">
-        {proizvodi?.map((product) =>product.kategorije==kategorija.ime ?  <Product key= {product._id} product={product} />:<p key={product._id}></p>)}     
-      </div>
+      
       
     </div>
   )
