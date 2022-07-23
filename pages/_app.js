@@ -9,7 +9,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <StateContext>
     <Lea>
-      <Toaster />
+      <div className='zindex'>
+        <Toaster  />
+      </div>
+      
       <Component {...pageProps} />
     </Lea>
     </StateContext>
