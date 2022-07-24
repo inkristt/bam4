@@ -47,7 +47,7 @@ a {
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    margin: 6px 18px;
+    padding: 4px 10px;
     position: relative;
 }
 
@@ -265,13 +265,14 @@ span.text-red {
     z-index: 2;
     font-size: 4rem;
     margin-top: 4px;
+    text-align: left;
 }
 
 .hero-banner-container h1 {
     z-index: 10;
     color: white;
     font-size: 10em;
-    margin-left: -20px;
+    text-align: left;
     text-transform: uppercase;
 }
 
@@ -402,10 +403,14 @@ h5 {
     position: fixed;
     right: 0;
     top: 0;
+    left: 0;
     z-index: 100;
     /* will-change: transform; */
     transition: all 1s ease-in-out;
 
+}
+.menu{
+    left: 0;
 }
 
 .cart-container {
@@ -1028,18 +1033,18 @@ h5 {
         top: 0;
         position: absolute;
         z-index: -200;
-        left: 0.3%;
+        left: 0;
         width: 120%;
         height: 120%;
-
-
+        aspect-ratio: 1;
+        
     }
 
     .hero-banner-container button {
 
         position: absolute;
         top: 60%;
-        left: 5%;
+        left: 10%;
         border-radius: 15px;
         padding: 10px 16px;
         background-color: #f02d34;
@@ -1052,9 +1057,7 @@ h5 {
 
     }
 
-    .tipka {
-        top: 10%;
-    }
+    
 
     .titan {
         display: none;
@@ -1121,7 +1124,6 @@ h5 {
     }
 
     .product-detail-container {
-        padding: 10px;
         justify-content: space-around;
         flex-wrap: wrap;
     }

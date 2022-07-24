@@ -15,7 +15,7 @@ const Menu = ({kategorije}) => {
     }
   return (
     
-    <div className='cart-wrapper' ref={cartRef}>
+    <div className='cart-wrapper menu' ref={cartRef}>
       
       <div className="menu-container">
         <button
