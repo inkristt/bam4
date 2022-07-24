@@ -180,6 +180,7 @@ span.text-red {
 .centar {
     display: flex;
     justify-content: center;
+    margin-bottom: 25%;
 }
 
 .rel {
@@ -968,9 +969,12 @@ h5 {
 }
 
 @media screen and (max-width:800px) {
+    .centar{
+        margin-bottom: 0;
+    }
     .rel{
-        width: 400px;
-        height: 400px;
+        width: 80%;
+        height: 80%;
     }
     
     .sticky {
