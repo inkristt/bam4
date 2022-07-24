@@ -7,7 +7,7 @@ import { useStateContext } from '../../context/StateContext';
 const KatDetails = ({proizvodi, kategorija}) => {
 
   return (
-    <div >
+    <div className='odvajanje'>
       <div className='centar'>
       <div className='rel'>
         <p>{kategorija.ime}</p>

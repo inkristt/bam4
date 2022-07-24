@@ -977,7 +977,9 @@ h5 {
         aspect-ratio: 1;
         
     }
-    
+    .odvajanje{
+        padding: 300px 2px;
+    }
     .sticky {
         position: sticky;
     }
@@ -1001,9 +1003,7 @@ h5 {
         margin-top: 20px;
         width: 100%;
     }
-    .margin{
-        margin-top: 300px;
-    }
+    
     .Nebitan {
         width: 10000px;
         top: 0;
