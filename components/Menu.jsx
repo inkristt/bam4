@@ -7,7 +7,7 @@ import { client } from '../lib/client'
 
 const Menu = ({kategorije}) => {
   
-    const { showMenu,setshowMenu,setkat,kat} = useStateContext();
+    const { setshowMenu,kat} = useStateContext();
     const cartRef = useRef();
     const [otvori, setotvori] = useState(false)
     const handle =()=>{

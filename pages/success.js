@@ -6,8 +6,8 @@ import { useStateContext } from '../context/StateContext';
 import { runFireworks } from '../lib/utils';
 import { client } from '../lib/client'
 
-const Success = () => {
-  const { setCartItems, setTotalPrice, setTotalQuantities,cartItems } = useStateContext();
+const Success = ({kategorije}) => {
+  const { setCartItems, setTotalPrice, setTotalQuantities,cartItems,setkat } = useStateContext();
 
   useEffect(() => {
 
@@ -27,7 +27,7 @@ const Success = () => {
     setTotalPrice(0);
     setTotalQuantities(0);
     runFireworks();
-    
+    setkat(kategorije)
   }, []);
 
   return (
@@ -53,5 +53,15 @@ const Success = () => {
     </div>
   )
 }
+export const getServerSideProps = async () => {
+  
+  const kategorijelista=`*[_type == "kategorije"]`
+  const kategorije= await client.fetch(kategorijelista)
+ 
+ 
 
+  return {
+    props: { kategorije}
+  }
+}
 export default Success
