@@ -25,28 +25,8 @@ export default {
             type: 'string',
         },
         {
-            name: 'smallText',
-            title: 'SmallText',
-            type: 'string',
-        },
-        {
-            name: 'midText',
-            title: 'MidText',
-            type: 'string',
-        },
-        {
             name: 'largeText1',
-            title: 'LargeText1',
-            type: 'string',
-        },
-        {
-            name: 'largeText2',
-            title: 'LargeText2',
-            type: 'string',
-        },
-        {
-            name: 'discount',
-            title: 'Discount',
+            title: 'Ime',
             type: 'string',
         },
         {

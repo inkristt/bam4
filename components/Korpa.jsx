@@ -83,11 +83,6 @@ const Korpa = () => {
               <h3>Ukupno:</h3>
               <h3>{totalPrice} Rsd</h3>
             </div>
-            <div className="total mt10">
-              <h3>Promo kod:</h3>
-              <input type="text"  value={promo} onChange={(e) => setpromo(e.target.value)}></input>
-            </div>
-            <h6>Promo kod moze da uamni cenu artikla za 5%, 10% I 20%</h6>
             <div className="btn-container">
               <Link href={`/placanje`}>
                 <button type="button" className="btn voz" onClick={() => setShowCart(false)}>

@@ -6,6 +6,8 @@ import { useStateContext } from '../context/StateContext';
 import { runFireworks } from '../lib/utils';
 import { client } from '../lib/client'
 
+import { motion } from "framer-motion"
+import Typewriter from 'typewriter-effect';
 const Success = ({kategorije}) => {
   const { setCartItems, setTotalPrice, setTotalQuantities,cartItems,setkat } = useStateContext();
 
@@ -31,7 +33,11 @@ const Success = ({kategorije}) => {
   }, []);
 
   return (
-    <div className="success-wrapper">
+    <motion.div className="success-wrapper"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+    >
       <div className="success">
         <p className="icon">
           <BsBagCheckFill />
@@ -50,7 +56,7 @@ const Success = ({kategorije}) => {
           </button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 export const getServerSideProps = async () => {

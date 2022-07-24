@@ -4,6 +4,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
+import { motion } from "framer-motion"
 
 const ProductDetails = ({ product, products }) => {
   const { image, naziv, opis, cena,kategorije,zaliha } = product;
@@ -14,14 +15,15 @@ const ProductDetails = ({ product, products }) => {
 
     setShowCart(true);
   }
-  const pom = ()=>{
-
-  }
   
 
   
   return (
-    <div>
+    <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1 }}
+    >
       <div className="product-detail-container">
         <div>
           <div className=".product-detail-image">
@@ -66,7 +68,7 @@ const ProductDetails = ({ product, products }) => {
             <p className="quantity-desc">
               <span className={qty !=1 ? 'minus': 'nimi'} onClick={decQty} ><AiOutlineMinus /></span>
               <span className="num">{qty}</span>
-              <span className={zaliha > qty? "plus" : "ni"} onClick={zaliha>qty?  incQty :pom} ><AiOutlinePlus /></span>
+              <span className={zaliha > qty? "plus" : "ni"} onClick={zaliha>qty?  incQty :null} ><AiOutlinePlus /></span>
             </p>
           </div> : <p></p>
           }
@@ -91,7 +93,7 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

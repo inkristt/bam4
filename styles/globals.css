@@ -630,7 +630,9 @@ h5 {
 .flex h5 {
     font-size: 24px;
 }
-
+.font{
+    font-family: 'Ibarra Real Nova';
+}
 .flex h4 {
     font-size: 20px;
 }
@@ -990,7 +992,7 @@ h5 {
 .main button {
     border-radius: 15px;
     padding: 10px 16px;
-    background-color: red;
+    background-color: #D4AF37;
     color: white;
     border: none;
     font-size: 18px;

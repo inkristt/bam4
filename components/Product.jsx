@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'
+
 import { urlFor } from '../lib/client';
 import { useStateContext } from '../context/StateContext';
 
@@ -34,7 +34,7 @@ const Product = ({ product }) => {
         {
           product.zaliha>0 ? <div className="buttons center">  
           <button type="button" className="buy-now2" onClick={handleBuyNow}>Dodaj u korpu</button>
-        </div> :null
+        </div> : null
         } 
     </div>
   )
