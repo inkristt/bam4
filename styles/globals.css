@@ -45,7 +45,7 @@ a {
 }
 
 .layout {
-    padding: 10px;
+   
 }
 
 .navbar-container {
@@ -220,7 +220,7 @@ span.text-red {
 .slidza {
     top: 0;
     left: 0;
-    width: 100%;
+    width: 400px;
     height: 100%;
     position: absolute;
 }
@@ -978,7 +978,9 @@ h5 {
         
     }
     .odvajanje{
-        padding: 300px 2px;
+        position: relative;
+        height: 100%;
+        width: 100%;
     }
     .sticky {
         position: sticky;
