@@ -186,7 +186,6 @@ span.text-red {
 .rel {
     position: absolute;
     width: 500px;
-    padding: 20px;
     z-index: -2;
     height: 500px;
     overflow: hidden;
@@ -415,6 +414,7 @@ h5 {
 }
 .menu{
     left: 0;
+    right: 0;
 }
 
 .cart-container {
@@ -1151,7 +1151,10 @@ h5 {
         width: 300px;
         padding: 10px;
     }
-
+    .menu{
+        left: 0;
+        right: 0;
+    }
     .cart-heading {
         margin-top: 35px;
     }
