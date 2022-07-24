@@ -5,12 +5,13 @@ import { useStateContext } from '../context/StateContext'
 import { client } from '../lib/client'
 
 const Home = ({bannerData,kategorije,proizvodi}) => {
-  const {setkat,kat} = useStateContext();
+  const {setkat,setsviproizvodi} = useStateContext();
   
 
   useEffect(() => {
     
     setkat(kategorije)
+    setsviproizvodi(proizvodi)
   }, [])
   
   return (
@@ -21,7 +22,7 @@ const Home = ({bannerData,kategorije,proizvodi}) => {
         
       </div>
       <div className="products-container grid2">
-      {kategorije?.map((kategorija) =>  <Kat key= {kategorija._id} kategorija={kategorija} />)}
+      {kategorije?.map((kategorija) =>  <Kat key= {kategorija._id} kategorija={kategorija}  />)}
       
     </div>
     <div className="products-heading">
@@ -29,7 +30,7 @@ const Home = ({bannerData,kategorije,proizvodi}) => {
         <p>Nakit po vasem ukusu</p>
       </div>
       <div className="products-container grid">
-      {proizvodi?.map((kategorija) =>  <Product key= {kategorija._id} product={kategorija} />)}
+        {proizvodi?.map((kategorija) =>  <Product  key= {kategorija._id} product={kategorija} />)}
     </div>
     </div>
   )

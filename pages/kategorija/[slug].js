@@ -1,12 +1,12 @@
 import React from 'react'
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
+import { useStateContext } from '../../context/StateContext';
 
 
-const KatDetails = ({proizvodi, kategorija}) => {
-  const pom=()=>{
+const KatDetails = ({ kategorija}) => {
+  const {sviproizvodi,setsviproizvodi}= useStateContext()
 
-  }
   return (
     <div >
       <div className='centar'>
@@ -18,7 +18,7 @@ const KatDetails = ({proizvodi, kategorija}) => {
   </div>
       <div>
         <div className="products-container grid2">
-          {proizvodi?.map((product) =>product.kategorije==kategorija.ime ?  <Product key= {product._id} product={product} />:null)}     
+          {sviproizvodi?.map((product) =>product.kategorije==kategorija.ime ?  <Product key= {product._id} product={product} />:null)}     
         </div>
       </div>
       
@@ -49,13 +49,9 @@ export const getStaticProps = async ({ params: { slug }}) => {
   const query = `*[_type == "kategorije" && slug.current == '${slug}'][0]`;
   
   const kategorija = await client.fetch(query);
-  const productsQuery = '*[_type == "product"]'
-  const proizvodi = await client.fetch(productsQuery);
-
   
-
   return {
-    props: { proizvodi, kategorija }
+    props: { kategorija }
   }
 }
 

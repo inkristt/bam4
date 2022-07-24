@@ -15,7 +15,7 @@ const Success = () => {
         const dec= item.quantity;
         const jed= item.zaliha-dec
 
-        client.patch(item._id).set({zaliha: jed}).commit().then((updated)=>{
+        client.patch(item._id).set({zaliha: jed,quantity:0}).commit().then((updated)=>{
           console.log('Daj mi updateovan pls! New document:')
           console.log(updated)
         }).catch((err)=>console.error("NE daj boze",err))
