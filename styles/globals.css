@@ -972,6 +972,7 @@ h5 {
     
     .centar{
         margin-bottom: 0;
+        display: none;
     }
     .rel{
         width: 80%;
@@ -1274,9 +1275,7 @@ h5 {
     .rel p{
         left: 7px;
     }
-    .centar{
-        margin-bottom: 300px;
-    }
+    
     .slidza{
         top: 0;
     }
