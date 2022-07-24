@@ -79,8 +79,8 @@ const Home = ({ bannerData, kategorije, proizvodi }) => {
 
          <motion.div 
           initial={{ opacity: 0,scale: 0.5 }}
-          whileInView={{ opacity: 1,scale:1 }}
-          transition={{ duration: 0.3 }}
+          animate={{ opacity: 1,scale:1 }}
+          transition={{ duration: 0.3,dela:1 }}
           className="products-container grid">
           {proizvodi?.map((kategorija) => <Product key={kategorija._id} product={kategorija} />)}
         </motion.div>
