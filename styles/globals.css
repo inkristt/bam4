@@ -12,10 +12,11 @@ body,
 }
 .fixed{
     top: 0;
+    left: 0;
     position: fixed;
     width: 100vw;
     background-color: #fff;
-    padding: 2px 20px 0 0;
+    padding: 2px 2px 0 0;
     z-index: 9999;
     
 }
@@ -851,7 +852,7 @@ h5 {
 .cancel {
     width: 1000px;
     margin: auto;
-    margin-top: 160px;
+    margin-top: 80px;
     background-color: #dcdcdc;
     padding: 50px;
     border-radius: 15px;

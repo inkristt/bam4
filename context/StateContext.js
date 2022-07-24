@@ -13,6 +13,9 @@ export const StateContext = ({ children }) => {
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
   const [kat, setkat] = useState([])
+  const [sviproizvodi, setsviproizvodi] = useState([])
+  const [trkat, settrkat] = useState()
+  const [trprod, settrprod] = useState()
 
   let foundProduct;
   let index;
@@ -98,6 +101,12 @@ export const StateContext = ({ children }) => {
         showMenu,
         kat,
         promo,
+        setsviproizvodi,
+        sviproizvodi,
+        trkat,
+        settrkat,
+        trprod,
+        settrprod,
         setpromo,
         setkat,
         setQty,
