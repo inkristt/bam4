@@ -10,6 +10,9 @@ body,
     box-sizing: border-box;
 
 }
+.menu-btn{
+    padding: 10px;
+}
 .fixed{
     top: 0;
     left: 0;
@@ -183,6 +186,7 @@ span.text-red {
 .rel {
     position: absolute;
     width: 500px;
+    padding: 20px;
     z-index: -2;
     height: 500px;
     overflow: hidden;
@@ -193,7 +197,7 @@ span.text-red {
     display: flex;
     align-items: center;
     height: 70px;
-    left: 20px;
+    left: 10%;
     
     position: absolute;
     color: rgb(255, 255, 255);

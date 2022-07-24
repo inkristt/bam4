@@ -20,7 +20,7 @@ const Menu = ({kategorije}) => {
       <div className="menu-container">
         <button
         type="button"
-        className="menu-heading"
+        className="menu-heading menu-btn"
         onClick={() => setshowMenu(false)}>
           <AiOutlineLeft />
         </button>
