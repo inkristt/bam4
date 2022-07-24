@@ -467,7 +467,7 @@ h5 {
 }
 
 .menu-container {
-    height: 100vh;
+    height: 100%;
     width: 400px;
     background-color: white;
     float: left;
@@ -1290,8 +1290,8 @@ h5 {
         display: block;
         margin: auto;
         position: relative;
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
     }
     .slidza{
         top: 0;
