@@ -6,7 +6,7 @@ import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
 const ProductDetails = ({ product }) => {
-  const { image, naziv, opis, cena,kategorije,zaliha } = product;
+  var { image, naziv, opis, cena,kategorije,zaliha } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart, sviproizvodi} = useStateContext();
   const handleBuyNow = () => {
@@ -17,7 +17,7 @@ const ProductDetails = ({ product }) => {
   useEffect(() => {
     sviproizvodi.map((proizvod)=>{
       if(proizvod._id==product._id){
-        product=proizvod
+        zaliha=proizvod.zaliha
       }
   })
   }, [product,sviproizvodi])
