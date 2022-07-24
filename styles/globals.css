@@ -13,6 +13,9 @@ body,
 .menu-btn{
     padding: 10px;
 }
+.mrel{
+    display: none;
+}
 .fixed{
     top: 0;
     left: 0;
@@ -1272,10 +1275,23 @@ h5 {
     .joj {
         width: 200px;
     }
-    .rel p{
+    .mrel p{
         left: 7px;
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 90px;
+        z-index: 100;
+        font-family: 'Ibarra Real Nova';
     }
-    
+    .mrel{
+        overflow: hidden;
+        display: block;
+        margin: auto;
+        position: relative;
+        width: 400px;
+        height: 400px;
+    }
     .slidza{
         top: 0;
     }

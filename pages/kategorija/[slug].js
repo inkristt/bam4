@@ -9,12 +9,17 @@ const KatDetails = ({proizvodi, kategorija}) => {
   return (
     <div className='odvajanje'>
       <div className='centar'>
-      <div className='rel'>
+        <div className='rel'>
+          <p>{kategorija.ime}</p>
+          <div className='crnina'></div>
+          <img className='slidza' src={urlFor(kategorija.slika)}/>
+        </div> 
+      </div>
+    <div className='mrel'>
         <p>{kategorija.ime}</p>
         <div className='crnina'></div>
-        <img className='slidza' src={urlFor(kategorija.slika)}/>
-      </div> 
-  </div>
+        <img className='slidza' src={urlFor(kategorija.slika)}/>   
+    </div>
       <div>
         <div className="products-container grid2 margin">
           {proizvodi?.map((product) =>product.kategorije==kategorija.ime ?  <Product key= {product._id} product={product} />:null)}     
