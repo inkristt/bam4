@@ -969,6 +969,10 @@ h5 {
 }
 
 @media screen and (max-width:800px) {
+    .rel{
+        width: 400px;
+        height: 400px;
+    }
     .centar{
         margin-bottom:80%;
     }
