@@ -180,8 +180,6 @@ span.text-red {
 .centar {
     display: flex;
     justify-content: center;
-    margin-bottom: 25%;
-
 }
 
 .rel {
