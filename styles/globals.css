@@ -45,7 +45,7 @@ a {
 }
 
 .layout {
-   
+    padding: 10px;
 }
 
 .navbar-container {
@@ -220,7 +220,7 @@ span.text-red {
 .slidza {
     top: 0;
     left: 0;
-    width: 400px;
+    width: 100%;
     height: 100%;
     position: absolute;
 }
@@ -969,6 +969,7 @@ h5 {
 }
 
 @media screen and (max-width:800px) {
+    
     .centar{
         margin-bottom: 0;
     }
@@ -1269,6 +1270,15 @@ h5 {
 
     .joj {
         width: 200px;
+    }
+    .rel p{
+        left: 7px;
+    }
+    .centar{
+        margin-bottom: 300px;
+    }
+    .slidza{
+        top: 0;
     }
 
 }
