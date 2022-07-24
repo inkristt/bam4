@@ -5,10 +5,10 @@ import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
-const ProductDetails = ({ product, products }) => {
+const ProductDetails = ({ product }) => {
   const { image, naziv, opis, cena,kategorije,zaliha } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart} = useStateContext();
+  const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart, sviproizvodi} = useStateContext();
   const handleBuyNow = () => {
     onAdd(product, qty);
 
@@ -85,7 +85,7 @@ const ProductDetails = ({ product, products }) => {
           <h2>Iz nase ponude</h2>
           <div className="marquee">
             <div className="maylike-products-container track">
-              {products.map((item) => (
+              {sviproizvodi.map((item) => (
                 <Product key={item._id} product={item} />
               ))}
             </div>
@@ -118,15 +118,11 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { slug }}) => {
-  const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-  const productsQuery = '*[_type == "product"]'
-  
+  const query = `*[_type == "product" && slug.current == '${slug}'][0]`;  
   const product = await client.fetch(query);
-  const products = await client.fetch(productsQuery);
 
- 
   return {
-    props: { products, product }
+    props: {product }
   }
 }
 
