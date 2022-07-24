@@ -1,28 +1,23 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
-const ProductDetails = ({ product }) => {
-  var { image, naziv, opis, cena,kategorije,zaliha } = product;
+const ProductDetails = ({ product, products }) => {
+  const { image, naziv, opis, cena,kategorije,zaliha } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart, sviproizvodi} = useStateContext();
+  const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart} = useStateContext();
   const handleBuyNow = () => {
     onAdd(product, qty);
 
     setShowCart(true);
   }
-  useEffect(() => {
-    sviproizvodi.map((proizvod)=>{
-      if(proizvod._id==product._id){
-        zaliha=proizvod.zaliha
-      }
-  })
-  }, [product,sviproizvodi])
+  const pom = ()=>{
 
- 
+  }
+  
 
   
   return (
@@ -71,7 +66,7 @@ const ProductDetails = ({ product }) => {
             <p className="quantity-desc">
               <span className={qty !=1 ? 'minus': 'nimi'} onClick={decQty} ><AiOutlineMinus /></span>
               <span className="num">{qty}</span>
-              <span className={zaliha > qty? "plus" : "ni"} onClick={zaliha>qty?  incQty :null} ><AiOutlinePlus /></span>
+              <span className={zaliha > qty? "plus" : "ni"} onClick={zaliha>qty?  incQty :pom} ><AiOutlinePlus /></span>
             </p>
           </div> : <p></p>
           }
@@ -90,7 +85,7 @@ const ProductDetails = ({ product }) => {
           <h2>Iz nase ponude</h2>
           <div className="marquee">
             <div className="maylike-products-container track">
-              {sviproizvodi.map((item) => (
+              {products.map((item) => (
                 <Product key={item._id} product={item} />
               ))}
             </div>
@@ -123,12 +118,15 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { slug }}) => {
-  const query = `*[_type == "product" && slug.current == '${slug}'][0]`;  
-
+  const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
+  const productsQuery = '*[_type == "product"]'
+  
   const product = await client.fetch(query);
+  const products = await client.fetch(productsQuery);
 
+ 
   return {
-    props: {product }
+    props: { products, product }
   }
 }
 
