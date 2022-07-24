@@ -20,10 +20,10 @@ const ProductDetails = ({ product }) => {
         product=proizvod
       }
   })
-  }, [product])
-  
-       
+  }, [product,sviproizvodi])
+
  
+
   
   return (
     <div>
