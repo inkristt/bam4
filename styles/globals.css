@@ -28,6 +28,58 @@ body,
     
 }
 
+.swiper-kont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.spas .p{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    z-index: 100;
+    padding: 10px ;
+    background-color: rgba(0, 0, 0, 0.619);
+    
+}
+.kurac{
+    max-width: 400px;
+    padding: 10px 12px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #E4B77D;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    width: 160px;
+    z-index: 1000000000;
+}
+.spoj{
+    display: flex;
+    gap: 50px;
+}
+.spas .p p{
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova';
+}
+
+.spas img{
+    width: 1000px;
+    height: 800px;
+}
+.spas{
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 500px;
+}
 
 ::-webkit-scrollbar {
     width: 0px;
@@ -54,7 +106,7 @@ a {
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    padding: 4px 10px;
+    padding: 10px 20px;
     position: relative;
 }
 
@@ -124,7 +176,7 @@ span.text-red {
     right: -8px;
     font-size: 12px;
     color: #eee;
-    background-color: #f02d34;
+    background-color: #D4AF37;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -526,7 +578,7 @@ h5 {
 
 .cart-num-items {
     margin-left: 10px;
-    color: #f02d34;
+    color: #D4AF37;
 }
 
 .empty-cart {
@@ -608,7 +660,7 @@ h5 {
     width: 100%;
     padding:0 30px 10px 65px;
     margin-top: 10px;
-    background-color: #dcdcdc;
+    background-color: rgb(233, 229, 229);
     border-radius: 15px 15px 0 0;
    
 }
@@ -627,7 +679,7 @@ h5 {
     font-size: 20px;
     margin-top: 10px;
     text-transform: uppercase;
-    background-color: #f02d34;
+    background-color: #E4B77D;
     color: #fff;
     cursor: pointer;
     transform: scale(1, 1);
@@ -681,7 +733,7 @@ h5 {
 }
 
 .reviews {
-    color: #f02d34;
+    color: #D4AF37;
     margin-top: 10px;
     display: flex;
     gap: 5px;
@@ -705,7 +757,7 @@ h5 {
     font-weight: 700;
     font-size: 26px;
     margin-top: 30px;
-    color: #f02d34;
+    color: #D4AF37;
 }
 
 .price .old-price,
@@ -731,12 +783,12 @@ h5 {
 
 .buttons .add-to-cart {
     padding: 10px 20px;
-    border: 1px solid #f02d34;
+    border: 1px solid #A37E2C;
     margin-top: 40px;
     font-size: 18px;
     font-weight: 500;
     background-color: white;
-    color: #f02d34;
+    color: #A37E2C;
     cursor: pointer;
     width: 200px;
     transform: scale(1, 1);
@@ -753,7 +805,7 @@ h5 {
     margin-left: 20px;
     margin-top: 5px;
     padding: 10px 20px;
-    background-color: #f02d34;
+    background-color: #D4AF37;
     color: white;
     border: none;
     font-size: 18px;
@@ -771,7 +823,7 @@ h5 {
     width: 200px;
 
     padding: 10px 20px;
-    background-color: #f02d34;
+    background-color: #D4AF37;
     color: white;
     border: none;
     margin-top: 40px;
@@ -1277,11 +1329,12 @@ h5 {
         width: 200px;
     }
     .mrel p{
+        top:50px;
         left: 7px;
         position: absolute;
         color: rgb(255, 255, 255);
         font-weight: bold;
-        font-size: 90px;
+        font-size: 60px;
         z-index: 100;
         font-family: 'Ibarra Real Nova';
     }
