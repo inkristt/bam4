@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
 import { client, urlFor } from '../../lib/client';
@@ -14,11 +14,16 @@ const ProductDetails = ({ product }) => {
 
     setShowCart(true);
   }
-  const pom = ()=>{
-
-  }
+  useEffect(() => {
+    sviproizvodi.map((proizvod)=>{
+      if(proizvod._id==product._id){
+        product=proizvod
+      }
+  })
+  }, [product])
   
-
+       
+ 
   
   return (
     <div>
@@ -66,7 +71,7 @@ const ProductDetails = ({ product }) => {
             <p className="quantity-desc">
               <span className={qty !=1 ? 'minus': 'nimi'} onClick={decQty} ><AiOutlineMinus /></span>
               <span className="num">{qty}</span>
-              <span className={zaliha > qty? "plus" : "ni"} onClick={zaliha>qty?  incQty :pom} ><AiOutlinePlus /></span>
+              <span className={zaliha > qty? "plus" : "ni"} onClick={zaliha>qty?  incQty :null} ><AiOutlinePlus /></span>
             </p>
           </div> : <p></p>
           }
@@ -119,7 +124,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug }}) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;  
-  
+
   const product = await client.fetch(query);
 
   return {

@@ -34,7 +34,7 @@ const Product = ({ product }) => {
         {
           product.zaliha>0 ? <div className="buttons center">  
           <button type="button" className="buy-now2" onClick={handleBuyNow}>Dodaj u korpu</button>
-        </div> : <p></p>
+        </div> :null
         } 
     </div>
   )
