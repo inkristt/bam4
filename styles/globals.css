@@ -176,7 +176,7 @@ span.text-red {
 .centar {
     display: flex;
     justify-content: center;
-    margin-bottom: 400px;
+    margin-bottom: 25%;
 
 }
 
@@ -965,6 +965,9 @@ h5 {
 }
 
 @media screen and (max-width:800px) {
+    .centar{
+        margin-bottom:80%;
+    }
     .sticky {
         position: sticky;
     }
