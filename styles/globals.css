@@ -984,6 +984,7 @@ h5 {
     .mt10 input{
         width: 80px;
     }
+   
     .grid {
         display: flex;
         flex-wrap: wrap;
@@ -1000,7 +1001,9 @@ h5 {
         margin-top: 20px;
         width: 100%;
     }
-
+    .margin{
+        margin-top: 300px;
+    }
     .Nebitan {
         width: 10000px;
         top: 0;

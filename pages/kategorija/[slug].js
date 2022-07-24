@@ -16,7 +16,7 @@ const KatDetails = ({proizvodi, kategorija}) => {
       </div> 
   </div>
       <div>
-        <div className="products-container grid2">
+        <div className="products-container grid2 margin">
           {proizvodi?.map((product) =>product.kategorije==kategorija.ime ?  <Product key= {product._id} product={product} />:null)}     
         </div>
       </div>
