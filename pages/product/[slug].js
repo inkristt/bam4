@@ -6,7 +6,7 @@ import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 import { motion } from "framer-motion"
 
-const ProductDetails = ({ product, products }) => {
+const ProductDetails = ({ product, products ,kategorija}) => {
   const { image, naziv, opis, cena,kategorije,zaliha } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart} = useStateContext();
@@ -124,7 +124,6 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug }}) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const productsQuery = '*[_type == "product"]'
- 
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
