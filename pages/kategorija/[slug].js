@@ -67,7 +67,8 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
 
   return {
-    props: { proizvodi, kategorija }
+    props: { proizvodi, kategorija },
+    revalidate:1,
   }
 }
 

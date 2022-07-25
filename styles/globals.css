@@ -79,6 +79,9 @@ body,
     overflow: hidden;
     width: 1000px;
     height: 500px;
+    display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
 }
 
 ::-webkit-scrollbar {
