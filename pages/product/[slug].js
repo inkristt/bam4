@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 const ProductDetails = ({ product, products ,kategorija}) => {
   const { image, naziv, opis, cena,kategorije,zaliha } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart} = useStateContext();
+  const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart,setkat} = useStateContext();
   const handleBuyNow = () => {
     onAdd(product, qty);
 
@@ -17,6 +17,9 @@ const ProductDetails = ({ product, products ,kategorija}) => {
   }
   const router=useRouter()
   
+  useEffect(() => {
+    setkat(kategorija)
+  }, [])
   
  
   
@@ -124,14 +127,16 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug }}) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const productsQuery = '*[_type == "product"]'
+  const lista = `*[_type == "kategorije"]`
+  const kategorija = await client.fetch(lista);
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
 
  
   return {
-    props: { products, product },
-    revalidate:1,
+    props: { products, product,kategorija },
+    revalidate:10,
   }
 }
 
