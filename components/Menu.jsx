@@ -1,45 +1,49 @@
-import React,{useRef,useState} from 'react'
+import React, { useRef, useState } from 'react'
 import { useStateContext } from '../context/StateContext';
 import Link from 'next/link'
-import {AiOutlineLeft,AiOutlineRight,AiOutlineDown} from 'react-icons/ai'
+import { AiOutlineLeft, AiOutlineRight, AiOutlineDown } from 'react-icons/ai'
 
-import { client } from '../lib/client'
+import { motion } from "framer-motion"
 
-const Menu = ({kategorije}) => {
-  
-    const { setshowMenu,kat} = useStateContext();
-    const cartRef = useRef();
-    const [otvori, setotvori] = useState(false)
-    const handle =()=>{
-        setshowMenu(false)
-    }
+const Menu = () => {
+
+  const { setshowMenu, kat,showMenu } = useStateContext();
+  const cartRef = useRef();
+  const [otvori, setotvori] = useState(false)
+ 
   return (
-    
-    <div className='cart-wrapper menu' ref={cartRef}>
+
+    <motion.div
       
-      <div className="menu-container">
+      className='cart-wrapper menu' ref={cartRef}>
+
+      <motion.div className="menu-container"
+            initial={{ opacity: 0, left:-300}}
+            animate={{ opacity: 1, left:0 }}
+            transition={{ duration: 0.5 }}
+      >
         <button
-        type="button"
-        className="menu-heading menu-btn"
-        onClick={() => setshowMenu(false)}>
+          type="button"
+          className="menu-heading menu-btn"
+          onClick={() => setshowMenu(false)}>
           <AiOutlineLeft />
         </button>
         <h3>Menu</h3>
         <div className='flex1 '>
-                <p onClick={handle} ><Link href="/" >Pocetna </Link> </p>
-                <p onClick={()=>setotvori(!otvori)}>Kategorije <span  > {otvori? <AiOutlineDown/>: <AiOutlineRight />}</span></p>
-                {otvori && kat?.map((item)=>     
-                        <p key={item._id} onClick={handle} >
-                          <Link href={`/kategorija/${item.slug.current}`}>
-                            {item.ime}
-                          </Link>
-                        </p> 
-                )}
+          <p onClick={() => setshowMenu(false)} ><Link href="/" >Pocetna </Link> </p>
+          <p onClick={() => setotvori(!otvori)}>Kategorije <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
+          {otvori && kat?.map((item) =>
+            <p key={item._id} onClick={() => setshowMenu(false)} >
+              <Link href={`/kategorija/${item.slug.current}`}>
+                {item.ime}
+              </Link>
+            </p>
+          )}
         </div>
-        
-        
-      </div>
-    </div>
+
+
+      </motion.div>
+    </motion.div>
   )
 }
 

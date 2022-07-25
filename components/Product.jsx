@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { useRouter } from 'next/router';
 import { urlFor } from '../lib/client';
 import { useStateContext } from '../context/StateContext';
 
 const Product = ({ product }) => {
+  const router=useRouter()
   const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart} = useStateContext();
   const handleBuyNow = () => {
     onAdd(product, 1);
@@ -13,8 +14,8 @@ const Product = ({ product }) => {
   
   return (
     <div className="product-card" >
-      <Link href={`/product/${product.slug.current}`}>
-        <div   >
+     
+        <div onClick={()=>router.push(`/product/${product.slug.current}`)}   >
           <img 
             src={urlFor(product.image && product.image[0])}
             width={250}
@@ -30,7 +31,7 @@ const Product = ({ product }) => {
           <p className="product-price align-text">{product.cena} Rsd</p>
           
         </div>
-      </Link>
+     
         {
           product.zaliha>0 ? <div className="buttons center">  
           <button type="button" className="buy-now2" onClick={handleBuyNow}>Dodaj u korpu</button>

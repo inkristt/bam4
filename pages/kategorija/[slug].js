@@ -3,7 +3,7 @@ import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
-import { motion, AnimatePresence } from "framer-motion"
+import { motion} from "framer-motion"
 
 const KatDetails = ({ proizvodi, kategorija }) => {
 
@@ -23,14 +23,13 @@ const KatDetails = ({ proizvodi, kategorija }) => {
       </div>
       <div>
         <div className="products-container grid2 margin">
-          {proizvodi?.map((product) => product.kategorije == kategorija.ime ? <AnimatePresence>
+          {proizvodi?.map((product) => product.kategorije == kategorija.ime ?
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              exit={{ opacity: 1, scale: 1 }}
               key={product._id}> <Product product={product} /> </motion.div>
-          </AnimatePresence> : null)}
+           : null)}
         </div>
       </div>
 
