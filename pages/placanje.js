@@ -57,11 +57,7 @@ const Placanje = () => {
     }
   }
   return (
-    <motion.form className='main'
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <form className='main'>
       {fields ? <p className="proba">Popunite sva polja</p> : <p></p>}
       <input type="text" placeholder='Ime' value={ime} onChange={(e) => setime(e.target.value)}></input>
       <input type="text" placeholder='Prezime' value={prezime} onChange={(e) => setprezime(e.target.value)}></input>
@@ -77,7 +73,7 @@ const Placanje = () => {
       </div>
 
 
-    </motion.form>
+    </form>
   )
 }
 

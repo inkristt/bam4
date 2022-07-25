@@ -33,11 +33,7 @@ const Success = ({kategorije}) => {
   }, []);
 
   return (
-    <motion.div className="success-wrapper"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-    >
+    <div className="success-wrapper">
       <div className="success">
         <p className="icon">
           <BsBagCheckFill />
@@ -56,7 +52,7 @@ const Success = ({kategorije}) => {
           </button>
         </Link>
       </div>
-    </motion.div>
+    </div>
   )
 }
 export const getServerSideProps = async () => {

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
-
+import { useRouter } from 'next/router';
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
@@ -15,8 +15,14 @@ const ProductDetails = ({ product, products }) => {
 
     setShowCart(true);
   }
-  
+  const router=useRouter()
 
+  const refresh =()=>{
+    router.replace(router.asPath)
+  }
+  useEffect(() => {
+   refresh()
+  }, [])
   
   return (
     <motion.div
