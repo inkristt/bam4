@@ -24,6 +24,12 @@ export default {
                 source: "name",
                 maxLenght: 90
             }
+        },
+        {
+            name:"grupa",
+            title:"Grupa",
+            type: 'string',
+           
         }
 
     ]

@@ -14,14 +14,14 @@ import Typewriter from 'typewriter-effect';
 
 import { motion } from "framer-motion"
 
-const Home = ({ bannerData, kategorije, proizvodi }) => {
-  const { setkat, setsviproizvodi } = useStateContext();
+const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
+  const { setkat,setgrupe } = useStateContext();
 
 
   useEffect(() => {
 
     setkat(kategorije)
-    setsviproizvodi(proizvodi)
+    setgrupe(katgrupe)
   }, [])
   const slides = Array.from({ length: 1000 }).map(
     (el, index) => `Slide ${index + 1}`
@@ -35,7 +35,7 @@ const Home = ({ bannerData, kategorije, proizvodi }) => {
     >
       <Swiper modules={[Virtual]} spaceBetween={10} slidesPerView={1} virtual>
         {bannerData.map((slideContent, index) => (
-          <SwiperSlide key={slideContent} virtualIndex={index} className='swiper-kont'>
+          <SwiperSlide key={slideContent.largeText1} virtualIndex={index} className='swiper-kont'>
             <div className='spas' >
               <div className='p'>
                 <div className='spoj'>
@@ -103,9 +103,12 @@ export const getServerSideProps = async () => {
   const bannerData = await client.fetch(bannerQuery);
   const productsQuery = '*[_type == "product"]'
   const proizvodi = await client.fetch(productsQuery);
+  const grupice = '*[_type == "kategorijegrupe"]'
+  const katgrupe = await  client.fetch(grupice)
+  console.log(katgrupe)
 
   return {
-    props: { bannerData, kategorije, proizvodi }
+    props: { bannerData, kategorije, proizvodi, katgrupe }
   }
 }
 export default Home

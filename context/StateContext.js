@@ -13,12 +13,10 @@ export const StateContext = ({ children }) => {
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
   const [kat, setkat] = useState([])
-  const [sviproizvodi, setsviproizvodi] = useState([])
-  const [trkat, settrkat] = useState()
-  const [trprod, settrprod] = useState()
+  const [grupe, setgrupe] = useState([])
 
   let foundProduct;
-  let index;
+ 
 
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find((item) => item._id === product._id);
@@ -101,12 +99,8 @@ export const StateContext = ({ children }) => {
         showMenu,
         kat,
         promo,
-        setsviproizvodi,
-        sviproizvodi,
-        trkat,
-        settrkat,
-        trprod,
-        settrprod,
+        grupe,
+        setgrupe,
         setpromo,
         setkat,
         setQty,

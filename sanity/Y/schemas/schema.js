@@ -7,6 +7,7 @@ import product from './product'
 import banner from './banner'
 import narudzbina from './narudzbina'
 import kategorije from './kategorije'
+import katgrupe from './katgrupe'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -15,6 +16,6 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    /* Your types here! */product,banner,narudzbina,kategorije
+    /* Your types here! */product,banner,narudzbina,kategorije,katgrupe
   ]),
 })

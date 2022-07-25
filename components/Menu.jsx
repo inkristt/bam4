@@ -7,20 +7,20 @@ import { motion } from "framer-motion"
 
 const Menu = () => {
 
-  const { setshowMenu, kat,showMenu } = useStateContext();
+  const { setshowMenu, kat } = useStateContext();
   const cartRef = useRef();
   const [otvori, setotvori] = useState(false)
- 
+
   return (
 
     <motion.div
-      
+
       className='cart-wrapper menu' ref={cartRef}>
 
       <motion.div className="menu-container"
-            initial={{ opacity: 0, left:-300}}
-            animate={{ opacity: 1, left:0 }}
-            transition={{ duration: 0.5 }}
+        initial={{ opacity: 0, left: -300 }}
+        animate={{ opacity: 1, left: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <button
           type="button"
@@ -33,12 +33,21 @@ const Menu = () => {
           <p onClick={() => setshowMenu(false)} ><Link href="/" >Pocetna </Link> </p>
           <p onClick={() => setotvori(!otvori)}>Kategorije <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
           {otvori && kat?.map((item) =>
-            <p key={item._id} onClick={() => setshowMenu(false)} >
+            <p key={item._id} onClick={() => setshowMenu(false)} className='p10'>
               <Link href={`/kategorija/${item.slug.current}`}>
                 {item.ime}
               </Link>
             </p>
           )}
+
+          <Link href={`/omeni`}>
+            <p>O meni</p>
+          </Link>
+          <Link href={`/kontakt`}>
+            <p>Kontakt</p>
+          </Link>
+
+
         </div>
 
 
