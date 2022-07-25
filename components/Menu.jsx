@@ -40,12 +40,9 @@ const Menu = () => {
             </p>
           )}
 
-          <Link href={`/omeni`}>
-            <p>O meni</p>
-          </Link>
-          <Link href={`/kontakt`}>
-            <p>Kontakt</p>
-          </Link>
+
+          <p onClick={() => setshowMenu(false)} ><Link href="/omeni" >O meni </Link> </p>
+          <p onClick={() => setshowMenu(false)} ><Link href="/kontakt" >Kontakt </Link> </p>
 
 
         </div>
