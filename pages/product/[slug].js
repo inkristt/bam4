@@ -6,22 +6,25 @@ import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 import { motion } from "framer-motion"
 
-const ProductDetails = ({ product, products }) => {
+const ProductDetails = ({ product, products , kategorija }) => {
   const { image, naziv, opis, cena,kategorije,zaliha } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart} = useStateContext();
+  const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart,setkat} = useStateContext();
   const handleBuyNow = () => {
     onAdd(product, qty);
 
     setShowCart(true);
   }
   const router=useRouter()
-
-  const refresh =()=>{
-    router.replace(router.asPath)
-  }
+  const refresh = async ()=>{
+    await router.replace(router.asPath)
+   }
+  
   useEffect(() => {
-   refresh()
+    
+    refresh()
+   setkat(kategorija)
+
   }, [])
   
   return (
@@ -128,13 +131,14 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug }}) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const productsQuery = '*[_type == "product"]'
-  
+  const lista ='*[_type == "kategorije"]'
+
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
-
+  const kategorija = await client.fetch(lista)
  
   return {
-    props: { products, product }
+    props: { products, product,kategorija }
   }
 }
 
