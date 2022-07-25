@@ -84,9 +84,9 @@ const Home = ({ bannerData, kategorije, proizvodi }) => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    exit={{ opacity: 1, scale: 1 }}
+                    key={kategorija._id}
           >
-            <Product key={kategorija._id} product={kategorija} />
+            <Product  product={kategorija} />
           </motion.div> )}
         </motion.div>
 
