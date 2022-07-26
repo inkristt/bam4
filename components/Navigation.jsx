@@ -17,7 +17,7 @@ const Navigation = () => {
         <AiOutlineMenu />
       </button>
       <p className="logo" onClick={()=> Router.push("/")}>
-         <Image src={logo} width='50' height='50'/> 
+            Srebro Shop
       </p>
 
       <button type="button" onClick={() => setShowCart(true)} className="cart-icon" >
