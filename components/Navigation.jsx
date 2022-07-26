@@ -5,7 +5,8 @@ import { AiOutlineShopping,AiOutlineMenu } from 'react-icons/ai'
 import Korpa from './Korpa';
 import { useStateContext } from '../context/StateContext';
 import Menu from './Menu';
-
+import logo from '../pages/assets/logo.png'
+import Image from 'next/image'
 const Navigation = () => {
   const { showCart, setShowCart, totalQuantities ,showMenu,setshowMenu} = useStateContext();
 
@@ -15,7 +16,7 @@ const Navigation = () => {
         <AiOutlineMenu />
       </button>
       <p className="logo">
-        <Link href="/">Srebro Shop</Link>
+        <Link href="/"><Image src={logo} width='50' height='50'/></Link>
       </p>
 
       <button type="button" onClick={() => setShowCart(true)} className="cart-icon" >

@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import bam from './assets/bam.jpg'
-import { FiInstagram, FiFacebook } from 'react-icons/fi'
-import { FaWhatsapp, FaViber } from 'react-icons/fa'
+
 const Kontakt = () => {
   return (
     <div className='kanta'>

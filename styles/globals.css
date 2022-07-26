@@ -127,7 +127,7 @@ a {
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 0px 25px;
     position: relative;
 }
 
