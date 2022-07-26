@@ -103,6 +103,7 @@ body,
     font-style: italic;
     
 }
+
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -1280,12 +1281,16 @@ hr{
   margin-top: 5px;
     background-color: #A37E2C;
     width: 305px;
-   
 }
 .cen{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.flex1 hr{
+    background-color: #A37E2C;
+    color: #A37E2C;
+
 }
 @media screen and (max-width:800px) {
 
