@@ -14,9 +14,7 @@ import { urlFor } from '../lib/client';
 const Korpa = () => {
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove, setpromo, promo } = useStateContext();
-  const pom = () => {
-
-  }
+  
   return (
     <motion.div className='cart-wrapper' ref={cartRef}
       
@@ -69,7 +67,7 @@ const Korpa = () => {
                         <AiOutlineMinus />
                       </span>
                       <span className="num" onClick="">{item.quantity}</span>
-                      <span className={item.zaliha > item.quantity ? "plus" : "ni"} onClick={() => { item.zaliha > item.quantity ? toggleCartItemQuanitity(item._id, 'inc') : pom }}><AiOutlinePlus /></span>
+                      <span className={item.zaliha > item.quantity ? "plus" : "ni"} onClick={() => { item.zaliha > item.quantity ? toggleCartItemQuanitity(item._id, 'inc') : null }}><AiOutlinePlus /></span>
                     </p>
                   </div>
                   <button
