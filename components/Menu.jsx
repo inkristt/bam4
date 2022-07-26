@@ -7,10 +7,15 @@ import { motion } from "framer-motion"
 
 const Menu = () => {
 
-  const { setshowMenu, kat } = useStateContext();
+  const { setshowMenu, kat,grupe } = useStateContext();
   const cartRef = useRef();
   const [otvori, setotvori] = useState(false)
-
+  const [otvori2, setotvori2] = useState(false)
+  const [otvori3, setotvori3] = useState(false)
+  const [otvori4, setotvori4] = useState(false)
+  const [otvori5, setotvori5] = useState(false)
+  const [otvori6, setotvori6] = useState(false)
+  const [otvori1, setotvori1] = useState(false)
   return (
 
     <motion.div
@@ -30,14 +35,18 @@ const Menu = () => {
         </button>
         <h3>Menu</h3>
         <div className='flex1 '>
-          <p onClick={() => setshowMenu(false)} ><Link href="/" >Pocetna </Link> </p>
-          <p onClick={() => setotvori(!otvori)}>Kategorije <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
-          {otvori && kat?.map((item) =>
-            <p key={item._id} onClick={() => setshowMenu(false)} className='p10'>
-              <Link href={`/kategorija/${item.slug.current}`}>
-                {item.ime}
-              </Link>
-            </p>
+          <p onClick={() => setshowMenu(false)} className='p' ><Link href="/" >Pocetna </Link> </p>
+          <p onClick={() => setotvori(!otvori)} className='p'>Kategorije <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
+          {otvori && grupe?.map((item) =>
+            <div key={item._id}  className='p10'>
+              <p> {item.ime} </p>
+                
+                <div className='p10'>
+                    {
+                      kat?.map((k)=><p className='p' key={k._id} > {k.grupa == item.ime ? k.ime : null }</p>)
+                    }
+                </div>
+            </div>
           )}
 
 
