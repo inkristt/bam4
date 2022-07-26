@@ -92,7 +92,7 @@ body,
     position: relative;
     overflow: hidden;
     width: 1000px;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     /* vertical */
@@ -1286,6 +1286,7 @@ hr{
 }
 @media screen and (max-width:800px) {
 
+    
     .centar {
         margin-bottom: 0;
         display: none;
