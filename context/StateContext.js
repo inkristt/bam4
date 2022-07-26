@@ -14,6 +14,7 @@ export const StateContext = ({ children }) => {
   const [qty, setQty] = useState(1);
   const [kat, setkat] = useState([])
   const [grupe, setgrupe] = useState([])
+  const [top, settop] = useState(false)
 
   let foundProduct;
  
@@ -100,6 +101,8 @@ export const StateContext = ({ children }) => {
         kat,
         promo,
         grupe,
+        top,
+        settop,
         setgrupe,
         setpromo,
         setkat,

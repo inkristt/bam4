@@ -64,7 +64,7 @@ body,
     transform: scale(1, 1);
     transition: transform 0.5s ease;
     width: 160px;
-    z-index: 1000000000;
+    z-index: 100;
 }
 
 .spoj {
@@ -579,12 +579,12 @@ h5 {
     background: hsla(0, 0%, 100%, 1);
 
     background: linear-gradient(45deg, hsla(0, 0%, 100%, 1) 43%, hsla(0, 0%, 98%, 1) 100%);
-    
+
     background: -moz-linear-gradient(45deg, hsla(0, 0%, 100%, 1) 43%, hsla(0, 0%, 98%, 1) 100%);
-    
+
     background: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, 1) 43%, hsla(0, 0%, 98%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#FAFAFA", GradientType=1 );
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#FAFAFA", GradientType=1);
 }
 
 .kartica:hover {
@@ -1160,8 +1160,71 @@ h5 {
     font-weight: bold;
 }
 
-@media screen and (max-width:800px) {
+.grad {
+    position: fixed;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    right:10px;
+    top: 30%;
+    width: 50px;
+    height: 50px;
+    background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    z-index: 999;
+}
+.grad:hover{
     
+    width: 70px;
+    justify-content: flex-start;
+    transition: 0.2s ease-in;
+}
+.top{
+    position: fixed;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    top:90%;
+    background-color: #324d67;
+    z-index: 999;
+    animation: bes 1.25s ease-in-out infinite;
+    cursor: pointer;
+}
+.top:hover{
+    animation: none;
+}
+@keyframes bes {
+    0%{
+        transform: translate(-5px);
+    }
+    30%{
+        transform: translate(-10px);
+    }
+    50%{
+        transform: translate(5px);
+    }
+    70%{
+        transform: translate(-10px);
+    }
+    100%{
+        transform: translate(-5px);
+    }
+}
+
+@media screen and (max-width:800px) {
+
     .centar {
         margin-bottom: 0;
         display: none;
