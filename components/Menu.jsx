@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { useStateContext } from '../context/StateContext';
 import Link from 'next/link'
 import { AiOutlineLeft, AiOutlineRight, AiOutlineDown } from 'react-icons/ai'
-
+import Router from "next/router";
 import { motion } from "framer-motion"
 
 const Menu = () => {
@@ -43,7 +43,9 @@ const Menu = () => {
                 
                 <div className='p10'>
                     {
-                      kat?.map((k)=><p className='p' key={k._id} > {k.grupa == item.ime ? k.ime : null }</p>)
+                      kat?.map((k)=><p className='p' key={k._id} onClick={() => {setshowMenu(false) ; Router.push(`/kategorija/${k.slug.current}`); }} >
+                      {k.grupa == item.ime ? k.ime : null }
+                    </p>)
                     }
                 </div>
             </div>
