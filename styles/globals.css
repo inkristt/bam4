@@ -1264,9 +1264,11 @@ h5 {
     font-size: 16px;  
 }
 .glavni .btn {
-    width: 50%;
+    width: 60%;
     text-transform: none;
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 hr{
   margin-top: 5px;

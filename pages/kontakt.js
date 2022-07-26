@@ -41,7 +41,7 @@ const Kontakt = () => {
 
           <h5 className='h5'> Otvoreni smo za Vaše i predloge i sugestije.</h5>
 
-          <button type='button' className='btn' > Posaljite nam poruku</button>
+          <a className='btn' href="mailto:tinagluscevic92@gmail.com"> Posaljite poruku</a>
 
         </div>
       </div>
