@@ -134,7 +134,9 @@ a {
     padding: 10px 25px;
     position: relative;
 }
-
+.navbar-container a{
+    cursor: pointer;
+}
 .marquee-text {
     font-size: 29px;
     font-weight: 600;

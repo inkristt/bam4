@@ -7,6 +7,7 @@ import { useStateContext } from '../context/StateContext';
 import Menu from './Menu';
 import Image from "next/image"
 import logo from "../pages/assets/logo.png";
+import Router from "next/router";
 const Navigation = () => {
   const { showCart, setShowCart, totalQuantities, showMenu, setshowMenu } = useStateContext();
 
@@ -15,13 +16,11 @@ const Navigation = () => {
       <button type="button" onClick={() => setshowMenu(!showMenu)} className="cart-icon" >
         <AiOutlineMenu />
       </button>
-      <p className="logo">
-        <Link href="/">
-          <a>
-          <Image src={logo} alt="hhh" width={40} height={40} />
-          </a>
-        </Link>
-      </p>
+     <a>
+     <Image src={logo} alt="hhh" width={40} height={40} onClick={()=> Router.push("/")}/>
+     </a>
+      
+      
 
       <button type="button" onClick={() => setShowCart(true)} className="cart-icon" >
         <AiOutlineShopping />
