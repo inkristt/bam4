@@ -38,7 +38,7 @@ const Menu = () => {
           <p onClick={() => setshowMenu(false)} className='p' ><Link href="/" >Pocetna </Link> </p>
           <hr />
           <p onClick={() => setotvori(!otvori)} className='p'>Prodavnica  <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
-          <hr />
+          
           {otvori && grupe?.map((item) =>
             <div key={item._id}  className='p10'>
               <p> {item.ime} </p>
@@ -52,6 +52,7 @@ const Menu = () => {
                 </div>
             </div>
           )}
+          <hr />
 
 
           
