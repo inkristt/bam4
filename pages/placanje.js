@@ -7,7 +7,7 @@ import bam from "./assets/bam.jpg";
 import Image from "next/image"
 
 
-import { motion } from "framer-motion"
+
 
 const Placanje = () => {
   const [ime, setime] = useState("")

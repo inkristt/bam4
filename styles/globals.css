@@ -67,10 +67,7 @@ body,
     z-index: 100;
 }
 
-.spoj {
-    display: flex;
-    gap: 50px;
-}
+
 
 .spas .p p {
     font-weight: bold;
@@ -99,7 +96,13 @@ body,
     justify-content: center;
     /* horizontal */
 }
-
+.spoj {
+    display: flex;
+    gap: 50px;
+    font-family: 'Ibarra Real Nova' ;
+    font-style: italic;
+    
+}
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -175,7 +178,7 @@ span.text-red {
 .logo {
     color: gray;
     font-size: 18px;
-
+    cursor: pointer;
 }
 
 .cart-icon {

@@ -46,6 +46,7 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
                       autoStart: true,
                       loop: true,
                     }}
+                    
                   />
 
                   <p>{index + 1}/{bannerData.length}</p>
