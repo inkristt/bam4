@@ -1277,7 +1277,7 @@ h5 {
     justify-content: center;
     align-items: center;
 }
-hr{
+.glavni hr{
   margin-top: 5px;
     width: 305px;
 }
