@@ -36,7 +36,7 @@ const Menu = () => {
         <h3>Menu</h3>
         <div className='flex1 '>
           <p onClick={() => setshowMenu(false)} className='p' ><Link href="/" >Pocetna </Link> </p>
-          <p onClick={() => setotvori(!otvori)} className='p'>Kategorije <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
+          <p onClick={() => setotvori(!otvori)} className='p'>Prodavnica  <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
           {otvori && grupe?.map((item) =>
             <div key={item._id}  className='p10'>
               <p> {item.ime} </p>

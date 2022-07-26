@@ -521,6 +521,7 @@ h5 {
     gap: 20px;
     font-size: 20px;
     color: #5f5f5f;
+    cursor: default;
     
 }
 .flex1 .p{
