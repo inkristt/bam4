@@ -33,7 +33,7 @@ const Menu = () => {
           onClick={() => setshowMenu(false)}>
           <AiOutlineLeft />
         </button>
-        <h3>Menu</h3>
+        <h3>Meni</h3>
         <div className='flex1 '>
           <p onClick={() => setshowMenu(false)} className='p' ><Link href="/" >Pocetna </Link> </p>
           <p onClick={() => setotvori(!otvori)} className='p'>Prodavnica  <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
