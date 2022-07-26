@@ -8,7 +8,7 @@ const Kontakt = () => {
     <div className='kanta'>
       <div className='mainkont'>
         <h1>Budimo u kontaktu</h1>
-        <h4>Sve naše ogrlice su napravljene sa puno ljubavi.<br /> Nudimo vam uvek priliku da nam se javite i ostavite aše želje i utiske.</h4>
+        <h4>Sve naše ogrlice su napravljene sa puno ljubavi.</h4>
         <div className='crnina'></div>
        <div className='gradient'><Image src={bam} width="1000" height='1000' /> </div> 
 

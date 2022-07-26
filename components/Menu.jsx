@@ -51,8 +51,6 @@ const Menu = () => {
             </div>
           )}
 
-
-          <p onClick={() => setshowMenu(false)} ><Link href="/omeni" >O meni </Link> </p>
           <p onClick={() => setshowMenu(false)} ><Link href="/kontakt" >Kontakt </Link> </p>
 
 
