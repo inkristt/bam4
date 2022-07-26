@@ -1222,7 +1222,63 @@ h5 {
         transform: translate(-5px);
     }
 }
-
+.glavni{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+}
+.sirina h2{
+    font-weight: 400;
+    font-family: 'Ibarra Real Nova';
+    font-style: italic;
+}
+.sirina{
+    width: 100%;
+}
+.sirina h5{
+    text-align: left;
+    font-weight: 500;
+    font-family: 'Ibarra Real Nova';
+    font-size: 17px;
+}
+.sirina .br{
+        font-weight: 400;
+}
+.sirina h1{
+    margin-top: 20px;
+    font-style: italic;
+    color:#D4AF37;
+    font-family:"Ibarra Real Nova ";
+    font-weight: 400;
+}
+.sirina h5 span{
+    font-weight: bold;
+}
+.glavni .h5{
+    font-weight: 400;
+    margin-top: -20px;
+    font-size: 16px;  
+}
+.glavni .btn {
+    width: 50%;
+    text-transform: none;
+  
+}
+hr{
+  margin-top: 5px;
+    background-color: #A37E2C;
+    width: 305px;
+   
+}
+.cen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media screen and (max-width:800px) {
 
     .centar {
