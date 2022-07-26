@@ -17,9 +17,9 @@ const Navigation = () => {
       </button>
       <p className="logo">
         <Link href="/">
-          <a>
+          <>
             <Image src={logo} alt="" width={50} height={50} />
-          </a>
+          </>
         </Link>
       </p>
 
