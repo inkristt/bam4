@@ -8,8 +8,8 @@ import { client } from '../lib/client'
 
 import { motion } from "framer-motion"
 import Typewriter from 'typewriter-effect';
-const Success = ({kategorije}) => {
-  const { setCartItems, setTotalPrice, setTotalQuantities,cartItems,setkat } = useStateContext();
+const Success = ({kategorije,katgrupe}) => {
+  const { setCartItems, setTotalPrice, setTotalQuantities,cartItems,setkat,setgrupe } = useStateContext();
 
   useEffect(() => {
 
@@ -30,6 +30,7 @@ const Success = ({kategorije}) => {
     setTotalQuantities(0);
     runFireworks();
     setkat(kategorije)
+    setgrupe(katgrupe)
   }, []);
 
   return (
@@ -60,10 +61,11 @@ export const getServerSideProps = async () => {
   const kategorijelista=`*[_type == "kategorije"]`
   const kategorije= await client.fetch(kategorijelista)
  
- 
+  const grupice = '*[_type == "kategorijegrupe"]'
+  const katgrupe = await  client.fetch(grupice)
 
   return {
-    props: { kategorije}
+    props: { kategorije,katgrupe}
   }
 }
 export default Success

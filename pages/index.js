@@ -105,7 +105,7 @@ export const getServerSideProps = async () => {
   const proizvodi = await client.fetch(productsQuery);
   const grupice = '*[_type == "kategorijegrupe"]'
   const katgrupe = await  client.fetch(grupice)
-  console.log(katgrupe)
+  
 
   return {
     props: { bannerData, kategorije, proizvodi, katgrupe }
