@@ -1235,6 +1235,8 @@ h5 {
     font-weight: 400;
     font-family: 'Ibarra Real Nova';
     font-style: italic;
+    font-size: 25px;
+    color: #D4AF37;
 }
 .sirina{
     width: 100%;
@@ -1254,6 +1256,7 @@ h5 {
     color:#D4AF37;
     font-family:"Ibarra Real Nova ";
     font-weight: 400;
+    font-size: 25px;
 }
 .sirina h5 span{
     font-weight: bold;
