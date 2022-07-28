@@ -5,13 +5,13 @@ import { RiSearch2Line } from 'react-icons/ri'
 import Korpa from './Korpa';
 import { useStateContext } from '../context/StateContext';
 import Menu from './Menu';
-
+import {AiOutlineClose} from 'react-icons/ai'
 import Router from "next/router";
 
 
 const Navigation = () => {
   const { showCart, setShowCart, totalQuantities, showMenu, setshowMenu } = useStateContext();
- /* const [term, setterm] = useState("")
+  const [term, setterm] = useState("")
   const [pokazi, setpokazi] = useState(false)
   const handlesearch = (e) => {
     e.preventDefault()
@@ -19,7 +19,7 @@ const Navigation = () => {
       Router.push(`/search/${term}`)
     }
     console.log('radii')
-  }*/
+  }
 
   return (
     <div className="navbar-container">
@@ -29,20 +29,22 @@ const Navigation = () => {
       <p className="logo">
         <Link href="/">Srebro Shop</Link>
       </p>
-      <div>
+      <div className='flex4'>
+      <button type="button" onClick={() => setpokazi(!pokazi)} className="cart-icon" >
+          {!pokazi &&<RiSearch2Line />}
+          </button>
+        { pokazi && <form
+          onSubmit={handlesearch}
+          className="flex4"
+        >
+          <input type="text" placeholder='Pretrazi' value={term} onChange={(e) => setterm(e.target.value)}></input> <button className='cart-icon' type='button' onClick={() => setpokazi(!pokazi)}> <AiOutlineClose /> </button>
+
+        </form>}
         <button type="button" onClick={() => setShowCart(true)} className="cart-icon" >
           <AiOutlineShopping />
           <span className="cart-item-qty">{totalQuantities}</span>
         </button>
-       { /*<button type="button" onClick={() => setpokazi(!pokazi)} className="cart-icon" >
-          {!pokazi &&<RiSearch2Line />}
-          </button>*/}
-        {/* pokazi && <form
-          onSubmit={handlesearch}
-        >
-          <input type="text" placeholder='Pretrazi' value={term} onChange={(e) => setterm(e.target.value)}></input> <p onClick={() => setpokazi(!pokazi)}> x</p>
-
-  </form>*/}
+       
 
       </div>
 

@@ -127,7 +127,26 @@ a {
 .layout {
     padding: 10px;
 }
-
+.margin{
+    margin: 50px;
+}
+.nista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    font-size: 30px;
+}
+.flex4{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.flex4 input{
+    height: 25px;
+}
 .navbar-container {
     display: flex;
     justify-content: space-between;
