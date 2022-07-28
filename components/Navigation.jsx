@@ -7,6 +7,7 @@ import { useStateContext } from '../context/StateContext';
 import Menu from './Menu';
 import {AiOutlineClose} from 'react-icons/ai'
 import Router from "next/router";
+import { motion } from "framer-motion"
 
 
 const Navigation = () => {
@@ -37,7 +38,11 @@ const Navigation = () => {
           onSubmit={handlesearch}
           className="flex4"
         >
-          <input type="text" placeholder='Pretrazi' value={term} onChange={(e) => setterm(e.target.value)}></input> <button className='cart-icon' type='button' onClick={() => setpokazi(!pokazi)}> <AiOutlineClose /> </button>
+          <motion.input 
+          initial={{opacity:0,width:0}}
+          animate={{opacity:1,width:160}}
+          transition={{ duration: 0.5 }}
+          type="text" placeholder='Pretrazi' value={term} onChange={(e) => setterm(e.target.value)}></motion.input> <button className='cart-icon' type='button' onClick={() => setpokazi(!pokazi)}> <AiOutlineClose /> </button>
 
         </form>}
         <button type="button" onClick={() => setShowCart(true)} className="cart-icon" >
