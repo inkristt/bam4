@@ -30,12 +30,9 @@ const Search = ({products}) => {
 }
 
 export const getServerSideProps = async ({ params: { term }}) => {
-    const lista = `*[_type == "pin" && naziv match '${term}*' || kategorije match '${term}*' || opis match '${term}*']`
-       
-        const products = await client.fetch(lista)
+    const lista = `*[_type == "product" && naziv match '${term}*' || kategorije match '${term}*' || opis match '${term}*']` 
+    const products = await client.fetch(lista)
 
-      
-  
     return {
       props: {products :  JSON.stringify(products) }
     }
