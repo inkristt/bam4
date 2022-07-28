@@ -6,7 +6,7 @@ import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 import { motion } from "framer-motion"
 
-const ProductDetails = ({ product, products ,kategorija}) => {
+const ProductDetails = ({ product, products}) => {
   const { image, naziv, opis, cena,kategorije,zaliha } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, totalQuantities, setShowCart,setkat} = useStateContext();
@@ -17,9 +17,7 @@ const ProductDetails = ({ product, products ,kategorija}) => {
   }
   const router=useRouter()
   
-  useEffect(() => {
-    setkat(kategorija)
-  }, [])
+  
   
  
   
@@ -135,7 +133,7 @@ export const getStaticProps = async ({ params: { slug }}) => {
 
  
   return {
-    props: { products, product,kategorija },
+    props: { products, product },
     revalidate:1,
   }
 }
