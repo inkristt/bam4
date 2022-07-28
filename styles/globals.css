@@ -200,6 +200,11 @@ span.text-red {
     font-size: 18px;
     cursor: pointer;
 }
+.nelogo{
+    color: gray;
+    font-size: 18px;
+    cursor: pointer;
+}
 
 .cart-icon {
     font-size: 25px;
@@ -1643,5 +1648,7 @@ h5 {
     .slidza {
         top: 0;
     }
-
+    .nelogo{
+        display: none;
+    }
 }

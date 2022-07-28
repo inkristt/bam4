@@ -28,7 +28,7 @@ const Navigation = () => {
       <button type="button" onClick={() => setshowMenu(!showMenu)} className="cart-icon" >
         <AiOutlineMenu />
       </button>
-      <p className="logo">
+      <p className={!pokazi ? 'logo' : "nelogo"}>
         <Link href="/">Srebro Shop</Link>
       </p>
       <div className='flex4'>
