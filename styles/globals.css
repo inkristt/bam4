@@ -145,6 +145,7 @@ a {
 .flex4 input{
     height: 25px;
     border-radius: 10px;
+    padding: 0 6px;
 }
 .navbar-container {
     display: flex;
