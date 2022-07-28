@@ -52,7 +52,7 @@ const Korpa = () => {
             <div className="product" key={item._id}>
               <img src={urlFor(item?.image[0])} className="cart-product-image" />
               <div className="item-desc">
-                <div className="flex top">
+                <div className="flex">
                   <h5>{item.naziv}</h5>
 
                   <h4>{item.cena}Rsd</h4>
