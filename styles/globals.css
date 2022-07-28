@@ -127,9 +127,7 @@ a {
 .layout {
     padding: 10px;
 }
-.margin{
-    margin: 50px;
-}
+
 .nista{
     display: flex;
     justify-content: center;
