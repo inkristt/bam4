@@ -16,6 +16,7 @@ const Navigation = () => {
   const [pokazi, setpokazi] = useState(false)
   const handlesearch = (e) => {
     e.preventDefault()
+    setterm('')
     if(term){
       Router.push(`/search/${term}`)
     }
