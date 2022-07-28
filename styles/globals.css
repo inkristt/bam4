@@ -1560,10 +1560,7 @@ h5 {
         width: 170px;
     }
 
-    .top {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+   
 
     .item-desc .bottom {
         margin-top: 30px;
