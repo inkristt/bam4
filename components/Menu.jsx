@@ -10,12 +10,7 @@ const Menu = () => {
   const { setshowMenu, kat,grupe } = useStateContext();
   const cartRef = useRef();
   const [otvori, setotvori] = useState(false)
-  const [otvori2, setotvori2] = useState(false)
-  const [otvori3, setotvori3] = useState(false)
-  const [otvori4, setotvori4] = useState(false)
-  const [otvori5, setotvori5] = useState(false)
-  const [otvori6, setotvori6] = useState(false)
-  const [otvori1, setotvori1] = useState(false)
+
   return (
 
     <motion.div

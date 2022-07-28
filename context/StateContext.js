@@ -15,7 +15,7 @@ export const StateContext = ({ children }) => {
   const [kat, setkat] = useState([])
   const [grupe, setgrupe] = useState([])
   const [top, settop] = useState(false)
-
+  
   let foundProduct;
  
   let index
