@@ -325,7 +325,7 @@ span.text-red {
     height: 10000px;
     position: absolute;
     background-color: #5a58584e;
-    z-index: 60;
+    z-index: 1;
 }
 
 .slidza {
@@ -1665,7 +1665,7 @@ h5 {
         color: rgb(255, 255, 255);
         font-weight: bold;
         font-size: 60px;
-        z-index: 1;
+        z-index: 2;
         font-family: 'Ibarra Real Nova';
     }
 
