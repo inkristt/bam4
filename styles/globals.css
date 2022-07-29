@@ -869,8 +869,6 @@ h5 {
 .product-detail-container {
     display: flex;
     gap: 40px;
-    margin: 10px;
-    margin: auto;
     margin-top: 60px;
     color: #324d67;
 
@@ -1535,8 +1533,8 @@ h5 {
     }
 
     .product-detail-container .product-detail-image {
-        width: 310px;
-        height: 310px;
+        width: 280px;
+        height: 280px;
     }
 
     .cart-container {
