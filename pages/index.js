@@ -3,7 +3,7 @@ import { Product } from '../components'
 import Kat from '../components/Kat'
 import { useStateContext } from '../context/StateContext'
 import { client, urlFor } from '../lib/client'
-import { Virtual } from 'swiper';
+import { Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -16,8 +16,7 @@ import { motion } from "framer-motion"
 
 const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
   const { setkat,setgrupe } = useStateContext();
-
-
+  
   useEffect(() => {
 
     setkat(kategorije)
@@ -33,28 +32,36 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
-      <Swiper modules={[Virtual]} spaceBetween={10} slidesPerView={1} virtual>
+      <Swiper modules={[Autoplay, Pagination, Navigation]} spaceBetween={10} slidesPerView={1}  autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        loop={true}
+        
+      >
         {bannerData.map((slideContent, index) => (
           <SwiperSlide key={slideContent.largeText1} virtualIndex={index} className='swiper-kont'>
             <div className='spas' >
               <div className='p'>
                 <div className='spoj'>
-
-                  <Typewriter className="font"
+                  <p>{slideContent.largeText1}</p>
+                  {/*<Typewriter className="font"
                     options={{
                       strings: [slideContent.largeText1],
                       autoStart: true,
                       loop: true,
-                    }}
-                    
-                  />
-
+                    }} 
+                  />*/}
                   <p>{index + 1}/{bannerData.length}</p>
                 </div>
-                <p>{slideContent.saleTime}</p>
+                {/*<p>{slideContent.saleTime}</p>
                 <Link href={`/product/${slideContent.product}`}>
                   <button type='button' className='kurac '>{slideContent.buttonText}</button>
-                </Link>
+                </Link>*/}
 
               </div>
               <img src={urlFor(slideContent.image)} />

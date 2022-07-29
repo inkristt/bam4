@@ -133,15 +133,7 @@ a {
     height: 70vh;
     font-size: 30px;
 }
-.dizajn{
-    display: flex;
-    justify-content: center;
-    cursor: default;
-    align-items: center;
-}
-.dizajn a span {
-    cursor: pointer;
-}
+
 .flex4{
     
     display: flex;
@@ -623,6 +615,9 @@ h5 {
 
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#FAFAFA", GradientType=1);
 }
+.dizajn{
+    display: none;
+}
 
 .kartica:hover {
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.451);
@@ -774,7 +769,12 @@ h5 {
     gap: 30px;
     padding: 20px;
 }
-
+.kupon{
+    display: none;
+}
+.fon{
+    display: inline;
+}
 .product .cart-product-image {
     width: 180px;
     height: 150px;
@@ -1196,16 +1196,7 @@ h5 {
     font-size: 20px;
     font-weight: bold;
 }
-.kupon{
-    padding-right: 5%;
-    font-size: 20px;
-    gap: 4px;
-   display: flex;
-   justify-content: flex-end;
-}
-.kupon a:hover{
-    transform: scale(1.1)
-}
+
 .grad {
     position: fixed;
     font-size: 50px;
@@ -1337,7 +1328,15 @@ h5 {
         margin-bottom: 0;
         display: none;
     }
-
+    .dizajn{
+        display: flex;
+        justify-content: center;
+        cursor: default;
+        align-items: center;
+    }
+    .dizajn a span {
+        cursor: pointer;
+    }
     .rel {
         width: 80%;
         aspect-ratio: 1;
@@ -1468,7 +1467,16 @@ h5 {
         font-size: 50px;
         margin-left: 5px;
     }
-
+    .kupon{
+        padding-right: 5%;
+        font-size: 20px;
+        gap: 4px;
+       display: flex;
+       justify-content: flex-end;
+    }
+    .kupon a:hover{
+        transform: scale(1.1)
+    }
     .banner-desc .left p {
         margin: 18px;
     }
@@ -1497,7 +1505,9 @@ h5 {
     .hero-banner-container h1 {
         font-size: 50px;
     }
-
+    .fon{
+        display: none;
+    }
     .hero-banner-container h3 {
         font-size: 40px;
     }
