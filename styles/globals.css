@@ -869,7 +869,8 @@ h5 {
 .product-detail-container {
     display: flex;
     gap: 40px;
-    margin: 40px;
+    margin: 10px;
+    margin: auto;
     margin-top: 60px;
     color: #324d67;
 
