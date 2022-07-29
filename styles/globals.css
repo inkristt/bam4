@@ -23,7 +23,7 @@ body,
 .fixed {
   
     position: relative;
-    width: 100%;
+    width: 100vw;
     background-color: #fff;
     padding: 5px 5px 0 0;
     z-index: 99;
@@ -1534,8 +1534,8 @@ h5 {
     }
 
     .product-detail-container .product-detail-image {
-        width: 350px;
-        height: 350px;
+        width: 310px;
+        height: 310px;
     }
 
     .cart-container {
