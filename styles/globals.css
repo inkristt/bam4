@@ -21,14 +21,12 @@ body,
 }
 
 .fixed {
-    top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
+  
+    position: relative;
     width: 100vw;
     background-color: #fff;
     padding: 2px 2px 0 0;
-    z-index: 9999;
+    z-index: 99;
 
 }
 
@@ -135,6 +133,15 @@ a {
     height: 70vh;
     font-size: 30px;
 }
+.dizajn{
+    display: flex;
+    justify-content: center;
+    cursor: default;
+    align-items: center;
+}
+.dizajn a span {
+    cursor: pointer;
+}
 .flex4{
     
     display: flex;
@@ -150,7 +157,7 @@ a {
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 10px 20px;
     position: relative;
 }
 .navbar-container a{
@@ -1189,7 +1196,16 @@ h5 {
     font-size: 20px;
     font-weight: bold;
 }
-
+.kupon{
+    padding-right: 5%;
+    font-size: 20px;
+    gap: 4px;
+   display: flex;
+   justify-content: flex-end;
+}
+.kupon a:hover{
+    transform: scale(1.1)
+}
 .grad {
     position: fixed;
     font-size: 50px;
@@ -1199,7 +1215,7 @@ h5 {
     color: white;
     border-radius: 10px;
     right:10px;
-    top: 30%;
+    top: 35%;
     width: 50px;
     height: 50px;
     background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
