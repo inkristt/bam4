@@ -1,9 +1,12 @@
 import React from 'react'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { motion } from 'framer-motion'
+import { useStateContext } from '../context/StateContext'
 const Instagram = () => {
+  const {  showMenu } = useStateContext();
   return (
-    <motion.a
+    <>
+    {showMenu && <motion.a
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, delay:1 }}
@@ -12,7 +15,9 @@ const Instagram = () => {
       <div className='grad'>
         <AiOutlineInstagram />
       </div>
-    </motion.a>
+    </motion.a>}
+    </>
+    
   )
 }
 
