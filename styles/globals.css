@@ -168,7 +168,7 @@ a {
 .marquee {
     position: relative;
     height: 500px;
-    width: 100%;
+    width: 95%;
     overflow-x: hidden;
 }
 
@@ -871,7 +871,10 @@ h5 {
     gap: 40px;
     margin-top: 60px;
     color: #324d67;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-detail-image {
@@ -1070,6 +1073,7 @@ h5 {
 }
 
 .maylike-products-container {
+
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -1533,8 +1537,8 @@ h5 {
     }
 
     .product-detail-container .product-detail-image {
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
     }
 
     .cart-container {
