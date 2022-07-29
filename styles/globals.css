@@ -870,11 +870,11 @@ h5 {
     display: flex;
     gap: 40px;
     margin-top: 40px;
-    margin-left: -40px;
+    
     color: #324d67;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
