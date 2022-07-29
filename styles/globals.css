@@ -1095,7 +1095,7 @@ h5 {
     margin: auto;
     margin-top: 80px;
     background-color: #dcdcdc;
-    padding: 50px;
+    padding: 10px;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -1107,10 +1107,12 @@ h5 {
     color: green;
     font-size: 40px;
 }
-
+.smanjen{
+    margin-top: 10px;
+}
 .success h2 {
     text-transform: capitalize;
-    margin-top: 15px 0px;
+   margin-top: 5px 0;
     font-weight: 900;
     font-size: 40px;
     color: #324d67;
@@ -1630,7 +1632,7 @@ h5 {
 
     .success,
     .cancel {
-        width: 370px;
+        width: 300px;
         margin-top: 100px;
         padding: 20px;
     }
