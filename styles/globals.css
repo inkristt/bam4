@@ -518,7 +518,7 @@ h5 {
     right: 0;
     top: 0;
     left: 0;
-    z-index: 11000;
+    z-index: 9999999;
     /* will-change: transform; */
     transition: all 1s ease-in-out;
 
@@ -535,7 +535,9 @@ h5 {
     width: 600px;
     background-color: white;
     float: right;
+    right: 0;
     padding: 20px 10px;
+   
     position: relative;
 
 }
@@ -1217,7 +1219,7 @@ h5 {
     background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
     background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
     background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-    z-index: 999;
+    z-index: 9;
 }
 .grad:hover{
     
