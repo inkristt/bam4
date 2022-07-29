@@ -33,7 +33,7 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
       transition={{ duration: 1 }}
     >
       <Swiper modules={[Autoplay, Pagination, Navigation]} spaceBetween={10} slidesPerView={1}  autoplay={{
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -41,7 +41,7 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
         }}
         navigation={true}
         loop={true}
-        
+
       >
         {bannerData.map((slideContent, index) => (
           <SwiperSlide key={slideContent.largeText1} virtualIndex={index} className='swiper-kont'>
