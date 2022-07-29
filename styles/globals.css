@@ -961,8 +961,9 @@ h5 {
 
 }
 .daproradi{
-    width: 95%;
-    height: 95%;
+    margin: auto;
+    width: 99%;
+    height: 99%;
     justify-content: center;
     align-items: center;
     overflow: hidden;
