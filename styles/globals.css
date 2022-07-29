@@ -1240,7 +1240,7 @@ h5 {
     height: 50px;
     top:90%;
     background-color: #324d67;
-    z-index: 999;
+    z-index: 9;
     animation: bes 1.25s ease-in-out infinite;
     cursor: pointer;
 }
