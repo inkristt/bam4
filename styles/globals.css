@@ -168,7 +168,7 @@ a {
 .marquee {
     position: relative;
     height: 500px;
-    width: 100%;
+    width: 102%;
     overflow-x: hidden;
 }
 
@@ -958,8 +958,15 @@ h5 {
     width: 105%;
     margin-left: 10px;
     gap: 40px;
-}
 
+}
+.daproradi{
+    width: 95%;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 .buttons .add-to-cart {
     padding: 10px 20px;
     border: 1px solid #A37E2C;
