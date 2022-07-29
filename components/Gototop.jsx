@@ -5,7 +5,7 @@ import { useStateContext } from '../context/StateContext'
 
 const Gototop = () => {
     const { top, settop } = useStateContext()
-    const {  showMenu } = useStateContext();
+    const {  showCart } = useStateContext();
     useEffect(() => {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 150) {
@@ -23,7 +23,7 @@ const Gototop = () => {
     };
     return (
         <>
-            {showMenu && top && <motion.div
+            {!showCart && top && <motion.div
                 onClick={goToTop}
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}

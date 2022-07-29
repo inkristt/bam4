@@ -3,10 +3,10 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import { useStateContext } from '../context/StateContext'
 const Instagram = () => {
-  const {  showMenu } = useStateContext();
+  const {  showCart } = useStateContext();
   return (
     <>
-    {showMenu && <motion.a
+    {!showCart && <motion.a
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, delay:1 }}
