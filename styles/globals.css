@@ -23,7 +23,7 @@ body,
 .fixed {
   
     position: relative;
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     padding: 5px 5px 0 0;
     z-index: 99;
