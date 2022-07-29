@@ -22,10 +22,7 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
     setkat(kategorije)
     setgrupe(katgrupe)
   }, [])
-  const slides = Array.from({ length: 1000 }).map(
-    (el, index) => `Slide ${index + 1}`
-  );
-
+ 
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}

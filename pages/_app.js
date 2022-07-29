@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps }) {
         <Instagram />
         <Gototop />
       </div>
-      
       <Component {...pageProps} />
     </Lea>
     </StateContext>

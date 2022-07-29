@@ -11,9 +11,7 @@ body,
     box-sizing: border-box;
 
 }
-.linijica{
-    box-shadow: 3px 3px 10px #D4AF37;
-}
+
 .menu-btn {
     padding: 10px;
 }
@@ -27,9 +25,11 @@ body,
     position: relative;
     width: 100vw;
     background-color: #fff;
-    padding: 2px 2px 0 0;
+    padding: 5px 5px 0 0;
     z-index: 99;
-
+    box-shadow: 3px 3px 10px #D4AF37;
+    margin-left: -10px ;
+    margin-top: -10px;
 }
 
 .swiper-kont {
@@ -119,9 +119,8 @@ a {
 
 .main-container {
     max-width: 1400px;
-    margin: auto;
     width: 100%;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 .layout {
