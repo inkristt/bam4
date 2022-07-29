@@ -29,7 +29,7 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
-      <Swiper modules={[Autoplay, Pagination, Navigation]} spaceBetween={10} slidesPerView={1}  autoplay={{
+      {/*<Swiper modules={[Autoplay, Pagination, Navigation]} spaceBetween={10} slidesPerView={1}  autoplay={{
           delay: 2000,
           disableOnInteraction: false,
         }}
@@ -52,13 +52,13 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
                       autoStart: true,
                       loop: true,
                     }} 
-                  />*/}
+                  />}
                   <p>{index + 1}/{bannerData.length}</p>
                 </div>
                 {/*<p>{slideContent.saleTime}</p>
                 <Link href={`/product/${slideContent.product}`}>
                   <button type='button' className='kurac '>{slideContent.buttonText}</button>
-                </Link>*/}
+                </Link>}
 
               </div>
               <img src={urlFor(slideContent.image)} />
@@ -67,7 +67,7 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
 
           </SwiperSlide>
         ))}
-      </Swiper>
+              </Swiper>*/}
       <div className="products-heading">
         <h2>Izaberite kategoriju:</h2>
 

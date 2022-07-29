@@ -1091,7 +1091,7 @@ h5 {
 
 .success,
 .cancel {
-    width: 1000px;
+    width: 800px;
     margin: auto;
     margin-top: 80px;
     background-color: #dcdcdc;
@@ -1625,7 +1625,7 @@ h5 {
     .success-wrapper,
     .cancel-wrapper {
 
-        min-height: 69vh;
+        min-height: 65vh;
     }
 
     .success,

@@ -71,7 +71,7 @@ const Placanje = () => {
       <input type="text" placeholder='Broj telefona' value={broj} onChange={(e) => setbroj(e.target.value)}></input>
       <input type="text" placeholder='Drzava' value={drzava} onChange={(e) => setdrzava(e.target.value)}></input>
       <input type="text" placeholder='Grad' value={grad} onChange={(e) => setgrad(e.target.value)}></input>
-      <input type="text" placeholder='Ulica io broj' value={ulica} onChange={(e) => setulica(e.target.value)}></input>
+      <input type="text" placeholder='Ulica i broj' value={ulica} onChange={(e) => setulica(e.target.value)}></input>
       <input type="text" placeholder='Postanski broj' value={posta} onChange={(e) => setposta(e.target.value)}></input>
       <button type="button" onClick={zavrsi}>Potvrdi</button>
       <div style={doktor} className="titan">
