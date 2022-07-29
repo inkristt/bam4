@@ -11,7 +11,9 @@ body,
     box-sizing: border-box;
 
 }
-
+.linijica{
+    box-shadow: 7px 7px 14px #D4AF37;
+}
 .menu-btn {
     padding: 10px;
 }
@@ -140,6 +142,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 5px;
+   
 }
 .flex4 input{
     height: 25px;

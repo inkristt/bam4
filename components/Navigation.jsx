@@ -28,7 +28,7 @@ const Navigation = () => {
   }
 
   return (
-    <div>
+    <div className='linijica'>
       <div className='kupon'>
             <a href='https://www.instagram.com/srebro.shop.nakit/'>
             <AiFillInstagram />
@@ -79,7 +79,7 @@ const Navigation = () => {
 
       {showCart && <Korpa />}
     </div>
-
+          
     </div>
     
   )
