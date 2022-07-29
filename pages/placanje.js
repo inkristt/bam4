@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStateContext } from '../context/StateContext';
 import { client } from '../lib/client'
 import Router from "next/router";
@@ -25,6 +25,12 @@ const Placanje = () => {
     right: "20%",
     position: "absolute",
   }
+  useEffect(() => {
+   cartItems?.map((product)=>{
+    product._key=uuidv4()
+   })
+  }, [])
+  
   const zavrsi = () => {
     if (ime && prezime && drzava && grad && broj && mail && posta && ulica) {
       const doc = {
