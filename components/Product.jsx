@@ -26,7 +26,7 @@ const Product = ({ product }) => {
             product.zaliha >0? <h5>{product.zaliha> 4? <p> Na stanju {product.zaliha} komada </p> : <p> Ostalo jos samo {product.zaliha} komada</p>} </h5> : <h5>Proizvod nedosupan</h5>
           }
           
-          <p className="product-name kat-name">{product.naziv}</p>
+          <p className="product-name ">{product.naziv}</p>
           <p className="product-name hmm" >{product.kategorije}</p>
           <p className="product-price align-text">{product.cena} Rsd</p>
           
