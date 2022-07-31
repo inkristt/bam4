@@ -1403,6 +1403,7 @@ h5 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         gap: 15px;
         margin-top: 20px;
         width: 100%;
@@ -1693,6 +1694,10 @@ h5 {
 
     .joj {
         width: 200px;
+    }
+    .product-name{
+        width: 240px;
+        text-align: center;
     }
 
     .mrel p {
