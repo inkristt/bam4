@@ -16,11 +16,11 @@ const KatDetails = ({ proizvodi, kategorija }) => {
           <img className='slidza' src={urlFor(kategorija.slika)} />
         </div>
       </div>
-      <div className='mrel'>
+      {/*<div className='mrel'>
         <p>{kategorija.ime}</p>
         <div className='crnina'></div>
         <img className='slidza' src={urlFor(kategorija.slika)} />
-      </div>
+  </div>*/}
       <div>
         <div className="products-container grid ">
           {proizvodi?.map((product) => product.kategorije == kategorija.ime ?
