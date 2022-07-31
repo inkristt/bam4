@@ -21,7 +21,7 @@ const Kat = ({kategorija:{ime, slug, slika}}) => {
             height={250}
             className="kat-image"
           />
-          <p className="product-name kat-name aw">{ime}</p>
+          <p className="kat-name aw">{ime}</p>
         </div>
       </Link>
     </motion.div>
