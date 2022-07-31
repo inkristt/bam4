@@ -1355,10 +1355,11 @@ h5 {
 
 @media screen and (max-width:800px) {
     .kat-image{
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
     }
     .kat-name{
+        margin-top: 10px;
         width: 180px;
         height: 180px;
     }
