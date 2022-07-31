@@ -602,7 +602,6 @@ h5 {
     
 }
 .zarel{
-    margin-top: 10px;
     position: relative;
 }
 
@@ -1712,5 +1711,8 @@ h5 {
     }
     .nelogo{
         display: none;
+    }
+    .zarel{
+        margin-top: 30px;
     }
 }
