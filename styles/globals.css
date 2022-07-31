@@ -593,8 +593,10 @@ h5 {
     height: 200px;
     display: flex;
     flex-direction: column;
+    
 }
 .zarel{
+    margin-top: 10px;
     position: relative;
 }
 
