@@ -6,8 +6,13 @@ const Kontakt = () => {
   return (
     <div className='kanta'>
       <div className='mainkont'>
+        <div>
         <h1>Budimo u kontaktu</h1>
+        </div>
+        <div>
         <h4>Sve naše ogrlice su napravljene sa puno ljubavi.</h4>
+        </div>
+        
         <div className='crnina'></div>
         <div className='gradient'><Image src={bam} width="1000" height='1000' /> </div>
 
