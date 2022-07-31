@@ -21,7 +21,15 @@ const KatDetails = ({ proizvodi, kategorija }) => {
         <div className='crnina'></div>
         <img className='slidza' src={urlFor(kategorija.slika)} />
   </div>*/}
+  <motion.div 
+  initial={{ opacity: 0, scale: 0.5 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5 }}
+  className='mrel'>
+        <p>{kategorija.ime}</p>
+  </motion.div>
       <div>
+       
         <div className="products-container grid ">
           {proizvodi?.map((product) => product.kategorije == kategorija.ime ?
             <motion.div

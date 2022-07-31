@@ -1701,10 +1701,11 @@ h5 {
     }
 
     .mrel p {
-        top: 50px;
+        text-align: center;
+        top: 40px;
         left: 7px;
         position: absolute;
-        color: rgb(255, 255, 255);
+        color: #D4AF37;
         font-weight: bold;
         font-size: 60px;
         z-index: 2;
@@ -1716,8 +1717,8 @@ h5 {
         display: block;
         margin: auto;
         position: relative;
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 220px;
     }
 
     .slidza {
