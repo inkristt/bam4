@@ -1702,9 +1702,7 @@ h5 {
 
     .mrel p {
         text-align: center;
-        top: 40px;
-        left: 7px;
-        position: absolute;
+        
         color: #D4AF37;
         font-weight: bold;
         font-size: 60px;
@@ -1718,7 +1716,7 @@ h5 {
         margin: auto;
         position: relative;
         width: 300px;
-        height: 220px;
+        height: auto;
     }
 
     .slidza {
