@@ -6,10 +6,10 @@ const Kontakt = () => {
   return (
     <div className='kanta'>
       <div className='mainkont'>
-        <div>
-        <h1>Budimo u kontaktu</h1>
+        <div className='zarel'>
+         <h1>Budimo u kontaktu</h1>
         </div>
-        <div>
+        <div className='zarel'>
         <h4>Sve naše ogrlice su napravljene sa puno ljubavi.</h4>
         </div>
         

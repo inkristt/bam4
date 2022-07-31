@@ -591,6 +591,11 @@ h5 {
     border-radius: 15px;
     width: 90vw;
     height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.zarel{
+    position: relative;
 }
 
 .kartice {
@@ -1214,6 +1219,8 @@ h5 {
     font-size: 20px;
     font-weight: bold;
 }
+
+
 
 .grad {
     position: fixed;
