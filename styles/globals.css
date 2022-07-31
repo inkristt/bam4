@@ -283,6 +283,12 @@ span.text-red {
     transform: scale(1, 1);
     transition: transform 0.5s ease;
 }
+.kat-image{
+    border-radius: 15px;
+    background-color: #ebebeb;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+}
 
 .align-text {
     text-align: center;
@@ -1349,8 +1355,14 @@ h5 {
 }
 
 @media screen and (max-width:800px) {
-
-    
+    .kat-image{
+        width: 180px;
+        height: 180px;
+    }
+    .kat-name{
+        width: 180px;
+        height: 180px;
+    }
     .centar {
         margin-bottom: 0;
         display: none;
@@ -1394,10 +1406,8 @@ h5 {
     }
 
     .grid2 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        grid-template: auto/ auto auto ;
+        grid-gap: 15px;
         margin-top: 20px;
         width: 100%;
     }

@@ -19,7 +19,7 @@ const Kat = ({kategorija:{ime, slug, slika}}) => {
             src={urlFor(slika)}
             width={250}
             height={250}
-            className="product-image"
+            className="kat-image"
           />
           <p className="product-name kat-name">{ime}</p>
         </div>
