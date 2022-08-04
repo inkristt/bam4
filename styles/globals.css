@@ -249,10 +249,7 @@ span.text-red {
     width: 100%;
 }
 
-.hmm {
-    text-align: center;
-    height: 40px;
-}
+
 
 .grid {
     display: grid;
@@ -1356,6 +1353,12 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.hmm {
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 @media screen and (max-width:800px) {
