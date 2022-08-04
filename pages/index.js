@@ -69,7 +69,7 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
         ))}
               </Swiper>*/}
       <div className="products-heading smanjen">
-        <h2>Kategorija</h2>
+        <h2>Kategorije</h2>
 
       </div>
       <div className="products-container grid2">
