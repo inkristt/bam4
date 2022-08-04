@@ -44,14 +44,15 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
           <SwiperSlide key={slideContent.largeText1} virtualIndex={index} className='swiper-kont'>
             <div className='spas' >
               <div className='p'>
-                <div className='spoj'>
+              <p>{index + 1}/{bannerData.length}</p>
+                {/*<div className='spoj'>
                   <p>{slideContent.largeText1}</p>
                   <p>{index + 1}/{bannerData.length}</p>
                 </div>
                 <p>{slideContent.saleTime}</p>
                 <Link href={`/product/${slideContent.product}`}>
                   <button type='button' className='kurac '>{slideContent.buttonText}</button>
-                </Link>
+        </Link>*/}
 
               </div>
               <img src={urlFor(slideContent.image)} />
