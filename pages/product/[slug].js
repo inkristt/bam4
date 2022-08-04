@@ -65,7 +65,7 @@ const ProductDetails = ({ product, products}) => {
           <h3>{kategorije}</h3>
           <h4>Opis: </h4>
           <p>{opis}</p>
-          <p className="price">{cena} Rsd</p>
+          <p className="price">{cena}RSD</p>
           {
             zaliha> 0? <div className="quantity">
             <h3>Kolicina:</h3>
@@ -88,7 +88,7 @@ const ProductDetails = ({ product, products}) => {
       </div>
 
       <div className="maylike-products-wrapper">
-          <h2>Iz nase ponude</h2>
+          <h2>Izdvajamo iz naše ponude</h2>
           <div className="marquee">
             <div className="maylike-products-container track">
               {products.map((item) => (

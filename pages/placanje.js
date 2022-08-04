@@ -20,6 +20,7 @@ const Placanje = () => {
   const [mail, setmail] = useState("")
   const { cartItems, totalPrice, totalQuantities, qty, promo } = useStateContext()
   const [fields, setfields] = useState(false)
+  const [napomena, setnapomena] = useState("")
 
   const doktor = {
     right: "20%",
@@ -73,6 +74,7 @@ const Placanje = () => {
       <input type="text" placeholder='Grad' value={grad} onChange={(e) => setgrad(e.target.value)}></input>
       <input type="text" placeholder='Ulica i broj' value={ulica} onChange={(e) => setulica(e.target.value)}></input>
       <input type="text" placeholder='Postanski broj' value={posta} onChange={(e) => setposta(e.target.value)}></input>
+      <input type="text" placeholder='Napomena' value={napomena} onChange={(e) => setnapomena(e.target.value)}></input>
       <button type="button" onClick={zavrsi}>Potvrdi</button>
       <div style={doktor} className="titan">
         <Image src={bam} width={300} height={300} />

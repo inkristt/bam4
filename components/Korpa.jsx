@@ -87,7 +87,7 @@ const Korpa = () => {
           <div className="cart-bottom">
             <div className="total">
               <h3>Ukupno:</h3>
-              <h3>{totalPrice} Rsd</h3>
+              <h3>{totalPrice}RSD</h3>
             </div>
             <div className="btn-container">
               <Link href={`/placanje`}>

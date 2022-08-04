@@ -57,8 +57,8 @@ export default {
             of: [{ type: 'product' }],
         },
         {
-            name:"pkod",
-            title:"Pkod",
+            name:"Napomena",
+            title:"Napomena",
             type:"string"
         }
     ]

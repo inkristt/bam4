@@ -36,7 +36,7 @@ const Menu = () => {
           
           {otvori && grupe?.map((item) =>
             <div key={item._id}  className='p10'>
-              <p> {item.ime} </p>
+              <p className='samodasescale'  onClick={()=>{Router.push(`/kategorijagrupe/${item.slug.current}`); setshowMenu(false)} }> {item.ime} </p>
                 
                 <div className='p10'>
                     {

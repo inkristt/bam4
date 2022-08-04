@@ -28,7 +28,7 @@ const Product = ({ product }) => {
           
           <p className="product-name ">{product.naziv}</p>
           <p className="product-name hmm" >{product.kategorije}</p>
-          <p className="product-price align-text">{product.cena} Rsd</p>
+          <p className="product-price align-text">{product.cena}RSD</p>
           
         </div>
      

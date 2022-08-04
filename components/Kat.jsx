@@ -13,7 +13,7 @@ const Kat = ({kategorija:{ime, slug, slika}}) => {
           transition={{ duration: 0.5,delay:1 }}
       >
        
-      <Link href={`/kategorija/${slug.current}`} > 
+      <Link href={`/kategorijagrupe/${slug.current}`} > 
         <div className="product-card">
           <img 
             src={urlFor(slika)}

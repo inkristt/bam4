@@ -67,13 +67,10 @@ export const getStaticPaths = async () => {
 }
 export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "kategorije" && slug.current == '${slug}'][0]`;
-
   const kategorija = await client.fetch(query);
   const productsQuery = '*[_type == "product"]'
   const proizvodi = await client.fetch(productsQuery);
-
-
-
+  
   return {
     props: { proizvodi, kategorija },
     revalidate:1,

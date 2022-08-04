@@ -69,11 +69,11 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
         ))}
               </Swiper>*/}
       <div className="products-heading smanjen">
-        <h2>Izaberite kategoriju:</h2>
+        <h2>Kategorija</h2>
 
       </div>
       <div className="products-container grid2">
-        {kategorije?.map((kategorija) => <Kat key={kategorija._id} kategorija={kategorija} />)}
+        {katgrupe?.map((kategorija) => <Kat key={kategorija._id} kategorija={kategorija} />)}
 
       </div>
       <div className="products-heading">
