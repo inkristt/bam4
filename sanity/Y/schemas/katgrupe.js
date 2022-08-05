@@ -18,14 +18,6 @@ export default {
                 maxLenght: 90
             }
 
-        },
-        {
-            name:"slika",
-            title: "Slika",
-            type:"image",
-            options: {
-            hotspot: true,
-            }
         }
         
     ]

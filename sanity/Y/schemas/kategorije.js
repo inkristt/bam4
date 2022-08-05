@@ -28,7 +28,8 @@ export default {
         {
             name:"grupa",
             title:"Grupa",
-            type: 'string',
+            type: 'array',
+            of: [{ type: 'string' }],
            
         }
 

@@ -14,13 +14,13 @@ import Typewriter from 'typewriter-effect';
 
 import { motion } from "framer-motion"
 
-const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
+const Home = ({ bannerData, kategorije, proizvodi,katgrupe}) => {
   const { setkat,setgrupe } = useStateContext();
   
   useEffect(() => {
+    setgrupe(katgrupe)
 
     setkat(kategorije)
-    setgrupe(katgrupe)
   }, [])
  
   return (
@@ -67,7 +67,7 @@ const Home = ({ bannerData, kategorije, proizvodi,katgrupe }) => {
 
       </div>
       <div className="products-container grid2">
-        {katgrupe?.map((kategorija) => <Kat key={kategorija._id} kategorija={kategorija} />)}
+        {kategorije?.map((kategorija) => <Kat key={kategorija._id} kategorija={kategorija} />)}
 
       </div>
       <div className="products-heading">
@@ -102,12 +102,12 @@ export const getServerSideProps = async () => {
   const bannerData = await client.fetch(bannerQuery);
   const productsQuery = '*[_type == "product"]'
   const proizvodi = await client.fetch(productsQuery);
-  const grupice = '*[_type == "kategorijegrupe"]'
-  const katgrupe = await  client.fetch(grupice)
-  
+
+   const grupice = `*[_type == "kategorijegrupe"]`
+   const katgrupe = await client.fetch(grupice)
 
   return {
-    props: { bannerData, kategorije, proizvodi, katgrupe }
+    props: { bannerData, kategorije, proizvodi,katgrupe }
   }
 }
 export default Home

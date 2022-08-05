@@ -34,16 +34,14 @@ const Menu = () => {
           <hr />
           <p onClick={() => setotvori(!otvori)} className='p'>Prodavnica  <span  > {otvori ? <AiOutlineDown /> : <AiOutlineRight />}</span></p>
           
-          {otvori && grupe?.map((item) =>
+          {otvori && kat?.map((item) =>
             <div key={item._id}  className='p10'>
-              <p className='samodasescale'  onClick={()=>{Router.push(`/kategorijagrupe/${item.slug.current}`); setshowMenu(false)} }> {item.ime} </p>
+              <p className='samodasescale'  onClick={()=>{Router.push(`/kategorija/${item.slug.current}`); setshowMenu(false)} }> {item.ime} </p>
                 
-                <div className='p10'>
+                <div className='p10'>                 
                     {
-                      kat?.map((k)=><p className='p' key={k._id} onClick={() => {setshowMenu(false) ; Router.push(`/kategorija/${k.slug.current}`); }} >
-                      {k.grupa == item.ime ? k.ime : null }
-                    </p>)
-                    }
+                      item.grupa?.map((filter)=> <p className='samodasescale' key={filter}  onClick={()=>{Router.push(`/kategorijagrupe/${filter}`); setshowMenu(false)} } >{filter} </p>)
+                    }                  
                 </div>
             </div>
           )}

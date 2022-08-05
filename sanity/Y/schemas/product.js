@@ -52,6 +52,11 @@ export default {
             title:"Kategorije",
             type:'string',
     
+        },
+        {
+            name:"grupa",
+            titel:"Grupa",
+            type:"string"
         }
         ,
         {
@@ -59,7 +64,5 @@ export default {
             title:"Zaliha",
             type:"number",
         }
-
-
     ]
 }
