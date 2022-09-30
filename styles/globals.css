@@ -29,7 +29,7 @@ body,
     background-color: #fff;
     padding: 5px 5px 0 0;
     z-index: 99;
-    box-shadow: 3px 3px 10px #D4AF37;
+    box-shadow: 3px 3px 10px #C00D0D;
     margin-left: -10px ;
     margin-top: -10px;
 }
@@ -60,7 +60,7 @@ body,
     border: none;
     font-size: 20px;
     text-transform: uppercase;
-    background-color: #E4B77D;
+    background-color: #C00D0D;
     color: #fff;
     cursor: pointer;
     transform: scale(1, 1);
@@ -231,7 +231,7 @@ span.text-red {
     right: -8px;
     font-size: 12px;
     color: #eee;
-    background-color: #D4AF37;
+    background-color: #C00D0D;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -647,7 +647,7 @@ h5 {
 }
 
 .kartica h1 {
-    color: #D4AF37;
+    color: #C00D0D;
 }
 
 .s {
@@ -662,7 +662,7 @@ h5 {
     position: absolute;
     top: 20px;
     left: 10px;
-    color: gold;
+    color:#C00D0D;
     font-family: 'Poppins';
     z-index: 10;
 }
@@ -759,7 +759,7 @@ h5 {
 
 .cart-num-items {
     margin-left: 10px;
-    color: #D4AF37;
+    color: #C00D0D;
 }
 
 .empty-cart {
@@ -869,7 +869,7 @@ h5 {
     font-size: 20px;
     margin-top: 10px;
     text-transform: uppercase;
-    background-color: #E4B77D;
+    background-color: #C00D0D;
     color: #fff;
     cursor: pointer;
     transform: scale(1, 1);
@@ -926,7 +926,7 @@ h5 {
 }
 
 .reviews {
-    color: #D4AF37;
+    color: #C00D0D;
     margin-top: 10px;
     display: flex;
     gap: 5px;
@@ -950,7 +950,7 @@ h5 {
     font-weight: 700;
     font-size: 26px;
     margin-top: 30px;
-    color: #D4AF37;
+    color: #C00D0D;
 }
 
 .price .old-price,
@@ -984,12 +984,12 @@ h5 {
 }
 .buttons .add-to-cart {
     padding: 5px 5px;
-    border: 1px solid #A37E2C;
+    border: 1px solid #C00D0D;
     margin-top: 40px;
     font-size: 18px;
     font-weight: 500;
     background-color: white;
-    color: #A37E2C;
+    color: #C00D0D;
     cursor: pointer;
     width: 200px;
     transform: scale(1, 1);
@@ -1006,7 +1006,7 @@ h5 {
     margin-left: 20px;
     margin-top: 5px;
     padding: 10px 20px;
-    background-color: #D4AF37;
+    background-color: #C00D0D;
     color: white;
     border: none;
     font-size: 18px;
@@ -1023,7 +1023,7 @@ h5 {
 .buttons .buy-now {
     width: 200px;
     padding: 10px 20px;
-    background-color: #D4AF37;
+    background-color: #C00D0D;
     color: white;
     border: none;
     margin-top: 40px;
@@ -1193,7 +1193,7 @@ h5 {
 .main button {
     border-radius: 15px;
     padding: 10px 16px;
-    background-color: #D4AF37;
+    background-color: #C00D0D;
     color: white;
     border: none;
     font-size: 18px;
@@ -1307,7 +1307,7 @@ h5 {
     font-family: 'Ibarra Real Nova';
     font-style: italic;
     font-size: 25px;
-    color: #D4AF37;
+    color: #C00D0D;
 }
 .sirina{
     width: 100%;
@@ -1324,7 +1324,7 @@ h5 {
 .sirina h1{
     margin-top: 20px;
     font-style: italic;
-    color:#D4AF37;
+    color:#C00D0D;
     font-family:"Ibarra Real Nova ";
     font-weight: 400;
     font-size: 25px;
@@ -1708,7 +1708,7 @@ h5 {
     .mrel p {
         text-align: center;
         
-        color: #D4AF37;
+        color: #C00D0D;
         font-weight: bold;
         font-size: 40px;
         z-index: 2;
