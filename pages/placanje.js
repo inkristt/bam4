@@ -5,8 +5,9 @@ import Router from "next/router";
 import { v4 as uuidv4 } from 'uuid';
 import bam from "./assets/bam.jpg";
 import Image from "next/image"
+import { PayPalButton } from "react-paypal-button-v2";
 
-
+const link ='AfEaKUcAEDfP0xgTOtJTlFuvcNAIwpFVdj4TyBRpBFoxj47RBLcB8OicU2z0EvYs80IZWUs9PmKJN4vR'
 
 
 const Placanje = () => {
@@ -18,14 +19,10 @@ const Placanje = () => {
   const [grad, setgrad] = useState("")
   const [posta, setposta] = useState("")
   const [mail, setmail] = useState("")
-  const { cartItems, totalPrice, totalQuantities, qty, promo } = useStateContext()
+  const { cartItems, totalPrice, promo } = useStateContext()
   const [fields, setfields] = useState(false)
   const [napomena, setnapomena] = useState("")
 
-  const doktor = {
-    right: "20%",
-    position: "absolute",
-  }
   useEffect(() => {
    cartItems?.map((product)=>{
     product._key=uuidv4()
@@ -63,6 +60,8 @@ const Placanje = () => {
       );
     }
   }
+  const amount = totalPrice*0.0083 
+  console.log(amount)
   return (
     <form className='main'>
       {fields ? <p className="proba">Popunite sva polja</p> : <p></p>}
@@ -75,10 +74,18 @@ const Placanje = () => {
       <input type="text" placeholder='Ulica i broj' value={ulica} onChange={(e) => setulica(e.target.value)}></input>
       <input type="text" placeholder='Postanski broj' value={posta} onChange={(e) => setposta(e.target.value)}></input>
       <input type="text" placeholder='Napomena' value={napomena} onChange={(e) => setnapomena(e.target.value)}></input>
-      <button type="button" onClick={zavrsi}>Potvrdi</button>
-      <div style={doktor} className="titan">
-        <Image src={bam} width={300} height={300} />
-      </div>
+      <PayPalButton
+        amount={amount}
+        // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+        onSuccess={(details, data) => {
+          zavrsi()
+        }}
+        options={{
+          clientId: link,
+          currency:'EUR'
+        }}
+      />
+
 
 
     </form>

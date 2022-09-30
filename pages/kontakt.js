@@ -5,31 +5,24 @@ import bam from './assets/bam.jpg'
 const Kontakt = () => {
   return (
     <div className='kanta'>
-      <div className='mainkont'>
-        <div className='zarel'>
-         <h1>Budimo u kontaktu</h1>
-        </div>
-        <div className='zarel'>
-        <h4>Sve naše ogrlice su napravljene sa puno ljubavi.</h4>
-        </div>
-        
-        <div className='crnina'></div>
-        <div className='gradient'><Image src={bam} width="1000" height='1000' /> </div>
+      <div >
+         <h1 style={{margin:0}}>Budimo u kontaktu</h1>
+
 
       </div>
-      <div className='cen'>
+      <div >
         <div className='glavni'>
           <div className='sirina'>
-            <h2>Srebro Shop</h2>
+            <h2>Free Baka</h2>
             <hr />
           </div>
           <div className='sirina'>
             <h5>Adresa</h5>
-            <h4>Pancevo</h4>
+            <h4>Beograd</h4>
             <hr />
           </div>
           <div className='sirina'>
-            <h5><span>Email:</span> tijana92@gmail.com</h5>
+            <h5><span>Email:</span> info@inkrist.net</h5>
             <hr />
             <br />
           </div >
@@ -45,7 +38,7 @@ const Kontakt = () => {
 
           <h5 className='h5'> Otvoreni smo za Vaše i predloge i sugestije.</h5>
 
-          <a className='btn' href="mailto:tinagluscevic92@gmail.com"> Posaljite poruku</a>
+          <a className='btn' href="mailto:info@inkrist.net"> Posaljite poruku</a>
 
         </div>
       </div>
